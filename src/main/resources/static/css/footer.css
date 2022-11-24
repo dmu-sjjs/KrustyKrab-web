@@ -2,7 +2,7 @@
 footer {
     background-color: #815B43;
     color: white;
-    height: 400px;
+    height: 300px;
 }
 #ftop {
     padding-top: 10px;
@@ -23,15 +23,18 @@ footer {
     padding-bottom: 8px;
 }
 
-#service {
-    text-align: right;
+#fmain > h6 > a {
+    text-decoration: none;
+    color: white;
 }
 
-#service > button {
-    margin-right: 30px;
-    margin-bottom: 30px;
+#service {
+    width: 160px;
+    height: 60px;
+    text-align: right;
     float: left;
 }
+
 
 .ftaga{
     text-decoration: none;

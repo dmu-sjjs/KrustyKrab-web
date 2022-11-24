@@ -1,11 +1,12 @@
 body {
     margin: 0;
-    background-color: #F1EBE7;
+    background-color: white;
 }
 
 .loginTop{
-    color: white;
-    background-color: #D0392A;
+    color: black;
+    background: url("../../img/background.png");
+    background-size: 100%;
     height: 150px;
     width: 100%;
     overflow: hidden;
@@ -13,7 +14,10 @@ body {
 	left: 0;
 	z-index: 2;
 	position: fixed;
+    margin: 0 auto;
+    padding: 0;
 }
+
 .loginHeader {
     padding-top: 20px;
     text-align: right;
@@ -22,7 +26,7 @@ body {
 
 .loginHeader > a {
     text-decoration: none;
-    color: white;
+    color: black;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -38,7 +42,7 @@ body {
 #loginLogoText {
     float: left;
     margin-left: 20px;
-    color: white;
+    color: black;
 }
 
 #loginLogoImg{
@@ -47,7 +51,7 @@ body {
 
 .path{
     padding-left: 30px;
-    padding-top: 15px;
+    padding-top: 5px;
     background-color: black;
     height: 35px;
     color: lightgoldenrodyellow;
@@ -76,5 +80,5 @@ body {
     border: none;
     border-radius: 30px;
     color: white;
-    background-color: #815B43;
+    background-color: black;
 }
