@@ -3,9 +3,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <link rel="stylesheet" href="resources/css/main/header.css">
+    <link rel="stylesheet" href="resources/css/main/sns.css">
+    <link rel="stylesheet" href="resources/css/main/header.css">
+    <link rel="stylesheet" href="resources/css/main/youtube.css">
+    <link rel="stylesheet" href="resources/css/footer.css">
+    <link rel="shortcut icon" href="resources/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="resources/img/favicon.png" type="image/x-icon">
+    <title>The Krusty Krab</title>
+    <%@include file="main/csslink.jsp" %>
 </head>
 <body>
-Welcome to my ${projectName}
+    <header>
+    <jsp:include page="main/header.jsp"/>
+
+    </header>
+    <div id="bg">_</div>
+    <jsp:include page="main/main.jsp"/>
+    <footer>
+    <jsp:include page="footer.jsp"/>
+    </footer>
 </body>
 </html>
