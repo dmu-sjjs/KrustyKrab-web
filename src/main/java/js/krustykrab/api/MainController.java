@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @GetMapping("/")
-    public String index(Model model){
-        model.addAttribute("projectName", "KrustyKrab");
+    public String index(Model model) {
         return "index";
+    }
+
+    @GetMapping("login")
+    public String loginForm(Model model) {
+        return "loginForm";
     }
 }
