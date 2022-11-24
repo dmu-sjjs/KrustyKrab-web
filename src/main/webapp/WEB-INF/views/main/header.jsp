@@ -4,7 +4,7 @@
     <a class="taga" href="login"><strong>로그인</strong></a>
 </div>
 <ul id="menu">
-    <a href="#"><img id="logoimg" width="80px" height="80px" src="../../../../resources/img/main/logo.png" /></a>
+    <a href="#"><img id="logoimg" width="80px" height="80px" src="resources/img/logo.png" /></a>
     <div id="menubars">
         <li class="menutitle">메뉴소개▾
             <ul class="submenu">

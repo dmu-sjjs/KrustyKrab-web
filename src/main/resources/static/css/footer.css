@@ -5,14 +5,16 @@ footer {
     height: 400px;
 }
 #ftop {
+    padding-top: 10px;
     text-align: right;
     padding-bottom: 20px;
     text-decoration: none;
     color: white;
 }
 
+
 #fmain{
-    width: 80%;
+    width: 85%;
     margin-left: 20px;
     float: left;
 }
@@ -23,14 +25,12 @@ footer {
 
 #service {
     text-align: right;
-    width:180px;
-    height: 100px;
-    float: left;
 }
 
 #service > button {
     margin-right: 30px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    float: left;
 }
 
 .ftaga{
@@ -40,8 +40,6 @@ footer {
     padding-right: 10px;
 }
 
-
-
 #servicecenterbtn{
     border-radius: 30px;
     background-color: #C6371E;
@@ -50,3 +48,4 @@ footer {
     font-size: 30px;
     padding: 5px 20px 5px 20px;
 }
+
