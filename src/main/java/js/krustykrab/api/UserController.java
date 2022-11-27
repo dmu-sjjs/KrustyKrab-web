@@ -8,10 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Optional;
 
 @Controller
@@ -26,10 +25,16 @@ public class UserController {
         return "loginForm";
     }
 
-//    @PostMapping("/login")
-//    public String login() {
-//        return "loginForm";
-//    }
+    @PostMapping("/login")
+    public String login(UserDto userDto, HttpSession session, Model model) {
+        userDto = userService.login(userDto);
+        if(userDto != null){
+            session.setAttribute("user",userDto);
+            return "redirect:/";
+        }
+        model.addAttribute("isLoginSuccess", false);
+        return "redirect:login";
+    }
 
     @GetMapping("/join")
     public String toJoinForm() {
@@ -37,13 +42,29 @@ public class UserController {
     }
 
     @PostMapping("/join")
-    public String join(UserDto userDto, Model model) throws Exception {
-        Optional<User> joinUser = userService.join(userDto);
-        if (joinUser.isEmpty()) {
-            throw new Exception();
+    public String join(UserDto userDto, HttpSession session) {
+        userDto = userService.join(userDto);
+        if (userDto != null) {
+            session.setAttribute("joinedUser", userDto);
+            return "redirect:joinSuccess";
         }
-        model.addAttribute("userDto", joinUser.get());
+        return "redirect:joinFail";
+    }
+
+    @GetMapping("/joinSuccess")
+    public String joinSuccess() {
         return "joinSuccess";
+    }
+
+    @GetMapping("/joinFail")
+    public String joinFail() {
+        return "joinFail";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session){
+        session.removeAttribute("user");
+        return "redirect:/";
     }
 
 }

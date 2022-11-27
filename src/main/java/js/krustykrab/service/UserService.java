@@ -14,15 +14,25 @@ public class UserService {
     private final UserRepository userRepository;
 
     // 회원가입
-    public Optional<User> join(UserDto userDto) {
-        // userDto 값 제대로 입력되었는지 검증은 프론트에서 처리
-        Optional<User> optionalUser = Optional.empty();
+    // userDto 값 제대로 입력되었는지 검증은 프론트에서 처리
+    public UserDto join(UserDto userDto) {
 
-        // 입력받은 아이디로 가입된 회원정보가 있는지 검증
-        Optional<User> userById = userRepository.findById(userDto.getId());
-        if(userById.isEmpty()) {
-            optionalUser = Optional.of(userRepository.save(userDto.toEntity()));
+        Optional<User> userWithEnteredId = userRepository.findById(userDto.getId());
+        if (userWithEnteredId.isPresent()) {
+            return null;
         }
-        return optionalUser;
+
+        User joinedUser = userRepository.save(userDto.toEntity());
+        return joinedUser.toDto();
+    }
+
+    // 로그인
+    public UserDto login(UserDto userLoginDto) {
+
+        Optional<User> optionalUser = userRepository.findByIdAndPw(userLoginDto.getId(), userLoginDto.getPw());
+        if(optionalUser.isEmpty()){
+            return null;
+        }
+        return optionalUser.get().toDto();
     }
 }
