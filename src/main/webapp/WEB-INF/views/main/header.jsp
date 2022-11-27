@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <div id="member">
-    <a class="taga" href="login"><strong>로그인</strong></a>
+    <a class="taga" href="/user/login"><strong>로그인</strong></a>
 </div>
 <ul id="menu">
     <a href="#"><img id="logoimg" width="80px" height="80px" src="resources/img/logo.png" /></a>
