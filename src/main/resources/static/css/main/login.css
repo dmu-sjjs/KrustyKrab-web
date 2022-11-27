@@ -1,6 +1,5 @@
 #member {
     margin-top: 10px;
-    background-color: white;
 	text-align: right;
     width: 100%;
     height: 25px;
@@ -10,6 +9,6 @@
     margin-right: 15px;
     padding: 5px;
     border-radius: 10px;
-    background-color: #C6371E;
-    color: white;
+    background-color: white;
+    color: black;
 }

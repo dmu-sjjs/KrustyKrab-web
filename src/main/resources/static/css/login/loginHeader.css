@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+.loginTop{
+    color: black;
+    background: url("../../img/background.png");
+    background-size: 100%;
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+	left: 0;
+	z-index: 2;
+	position: fixed;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.loginHeader {
+    padding-top: 20px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.loginHeader > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.loginLogo {
+    margin-left: 20px;
+    width: 80%;
+    height: 100px;
+    padding-bottom: 30px;
+    float: left;
+}
+
+#loginLogoText {
+    float: left;
+    margin-left: 20px;
+    color: black;
+}
+
+#loginLogoImg{
+    float: left;
+}
+
+.path{
+    padding-left: 30px;
+    padding-top: 5px;
+    background-color: black;
+    height: 35px;
+    color: lightgoldenrodyellow;
+}
+
+.path > a {
+    text-decoration: none;
+    color: white;
+}
+
+.dummy{
+    height: 150px;
+}
+
+.signUp {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    float: left;
+}
+
+.signUp > a{
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+}

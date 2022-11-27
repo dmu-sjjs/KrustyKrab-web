@@ -1,0 +1,64 @@
+.loginMain {
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.maintext > #firstline{
+    color: #C6371E;
+}
+
+.loginform {
+    height: 500px;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+.normal_login {
+    border-right: 1px solid gray;
+}
+
+.normal_login > form {
+    display: inline;
+}
+
+.normal_login, .social_login {
+    width: 500px;
+    float: left;
+    margin-left: 30px;
+}
+
+.normal_login > a {
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #815B43;
+}
+
+#id, #pw {
+    margin-bottom: 10px;
+    width: 480px;
+    height: 40px;
+    font-size: 35px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background-color: white;
+}
+
+#autologin, #loginbtn{
+    margin-bottom: 15px;
+}
+
+#loginbtn{
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #C6371E;
+}
