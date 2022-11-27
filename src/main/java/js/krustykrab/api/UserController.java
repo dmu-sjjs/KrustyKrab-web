@@ -39,9 +39,9 @@ public class UserController {
     @PostMapping("/join")
     public String join(UserDto userDto, Model model) throws Exception {
         Optional<User> joinUser = userService.join(userDto);
-//        if(joinUser.isEmpty()){
-//            throw new Exception();
-//        }
+        if (joinUser.isEmpty()) {
+            throw new Exception();
+        }
         model.addAttribute("userDto", joinUser.get());
         return "joinSuccess";
     }
