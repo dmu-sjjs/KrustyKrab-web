@@ -35,4 +35,12 @@ public class UserService {
         }
         return optionalUser.get().toDto();
     }
+
+    public boolean duplicationCheck(String id){
+        Optional<User> user = userRepository.findById(id);
+        if(user.isPresent()){
+            return true;
+        }
+        return false;
+    }
 }
