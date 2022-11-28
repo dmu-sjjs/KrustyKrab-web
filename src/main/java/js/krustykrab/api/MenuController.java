@@ -1,8 +1,7 @@
 package js.krustykrab.api;
 
 import com.opencsv.exceptions.CsvValidationException;
-import js.krustykrab.csv.MenuCsvParser;
-import js.krustykrab.dto.MenuDto;
+import js.krustykrab.dto.menu.MenuDto;
 import js.krustykrab.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;

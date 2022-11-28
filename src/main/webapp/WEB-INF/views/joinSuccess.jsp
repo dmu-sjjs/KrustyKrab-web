@@ -1,4 +1,4 @@
-<%@ page import="js.krustykrab.dto.UserDto" %>
+<%@ page import="js.krustykrab.dto.user.UserDto" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>

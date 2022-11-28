@@ -1,7 +1,6 @@
 package js.krustykrab.api;
 
-import js.krustykrab.domain.User;
-import js.krustykrab.dto.UserDto;
+import js.krustykrab.dto.user.UserDto;
 import js.krustykrab.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
-import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor

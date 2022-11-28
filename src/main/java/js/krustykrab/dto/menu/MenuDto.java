@@ -1,4 +1,4 @@
-package js.krustykrab.dto;
+package js.krustykrab.dto.menu;
 
 import js.krustykrab.domain.Menu;
 import lombok.*;
