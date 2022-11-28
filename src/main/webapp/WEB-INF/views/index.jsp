@@ -16,9 +16,8 @@
 <body>
     <header>
     <jsp:include page="main/header.jsp"/>
-
     </header>
-    <div id="bg">_</div>
+    <div id="bg"></div>
     <jsp:include page="main/main.jsp"/>
     <footer>
     <jsp:include page="footer.jsp"/>

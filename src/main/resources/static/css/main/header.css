@@ -4,6 +4,8 @@
 }
 body {
 	background-color: #F1EBE7;
+	padding: 0;
+	margin: 0;
 }
 
 
@@ -22,8 +24,9 @@ ul {
 }
 
 header {
-	background: url("../../img/background.png");
-	background-size: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
