@@ -25,9 +25,9 @@
     <div class="mainInput">
         <div class="normal_login">
             <h2>일반 로그인</h2>
-            <form id="loginForm" >
-                <input id="id" type="text" placeholder="아이디" /><br>
-                <input id="pw" type="password" placeholder="비밀번호" /><br>
+            <form id="loginForm" action="login" method="post">
+                <input id="id" type="text" placeholder="아이디" name="id"/><br>
+                <input id="pw" type="password" placeholder="비밀번호" name="pw"/><br>
                 <input id="adminlogin" type="checkbox" /> 관리자 로그인
                 <input id="saveid" type="checkbox" /> 아이디 저장
                 <input id="autologin" type="checkbox" /> 자동 로그인 <br>

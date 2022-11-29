@@ -29,11 +29,13 @@ public class UserController {
     public String login(UserDto userDto, HttpSession session, Model model) {
         userDto = userService.login(userDto);
         if(userDto != null){
+            System.out.println(userDto.getUsername()+"님이 로그인하셨습니다.");
             session.setAttribute("user",userDto);
             return "redirect:/";
         }
+        System.out.println("로그인 실패!");
         model.addAttribute("isLoginSuccess", false);
-        return "redirect:login";
+        return "redirect:joinFail";
     }
 
     @GetMapping("/logout")
@@ -74,11 +76,6 @@ public class UserController {
         }
 
         return "duplicationCheck";
-    }
-
-    @GetMapping("/joinSuccess")
-    public String joinSuccess() {
-        return "redirect:/";
     }
 
     @GetMapping("/joinFail")
