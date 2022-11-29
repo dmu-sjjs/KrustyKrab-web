@@ -10,13 +10,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="#"><img src="../../../../resources/img/main/banner.jpg" class="d-block w-100" alt="..."></a>
+                <a href="#"><img src="/resources/img/main/banner.jpg" class="d-block w-100" alt="..."></a>
             </div>
             <div class="carousel-item">
-                <a href="#"><img src="../../../../resources/img/main/banner.jpg" class="d-block w-100" alt="..."></a>
+                <a href="#"><img src="/resources/img/main/banner.jpg" class="d-block w-100" alt="..."></a>
             </div>
             <div class="carousel-item">
-                <a href="#"><img src="../../../../resources/img/main/banner.jpg" class="d-block w-100" alt="..."></a>
+                <a href="#"><img src="/resources/img/main/banner.jpg" class="d-block w-100" alt="..."></a>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -35,9 +35,9 @@
     <div id="sns">
         <h1 id="snstitle">Krusty Krab</h1>
         <ul class="snslist">
-            <li><a href="#"><img width="80px" height="80px" src="../../resources/img/main/youtube.jpg" /></a> Youtube</li>
-            <li><a href="#"><img width="80px" height="80px" src="../../resources/img/main/instagram.png" /></a> Instagram</li>
-            <li><a href="#"><img width="80px" height="80px" src="../../resources/img/main/facebook.jpg" /></a> Facebook</li>
+            <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/youtube.jpg" /></a> Youtube</li>
+            <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/instagram.png" /></a> Instagram</li>
+            <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/facebook.jpg" /></a> Facebook</li>
         </ul>
     </div>
 </main>

@@ -1,0 +1,27 @@
+
+.joinForm > input{
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#overlap {
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#overlap:hover {
+    background-color: black;
+    color: white;
+}
+
+#joinSubmit {
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+}

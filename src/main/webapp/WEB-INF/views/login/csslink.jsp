@@ -3,3 +3,4 @@
 <link rel="stylesheet" href="/resources/css/login/loginHeader.css"/>
 <link rel="stylesheet" href="/resources/css/login/loginMain.css"/>
 <link rel="stylesheet" href="/resources/css/footer.css"/>
+<link rel="stylesheet" href="/resources/css/login/join.css"/>

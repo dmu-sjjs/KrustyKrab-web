@@ -22,10 +22,10 @@
         <h1 id="firstline">YOUR WAY</h1>
         <h1 id="secondline">어서오세요 집게리아입니다!</h1>
     </div>
-    <div class="loginform">
+    <div class="mainInput">
         <div class="normal_login">
             <h2>일반 로그인</h2>
-            <form>
+            <form id="loginForm" >
                 <input id="id" type="text" placeholder="아이디" /><br>
                 <input id="pw" type="password" placeholder="비밀번호" /><br>
                 <input id="adminlogin" type="checkbox" /> 관리자 로그인
