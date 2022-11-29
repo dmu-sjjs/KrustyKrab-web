@@ -39,7 +39,7 @@
         alert('중복이 아닙니다.');
         if(confirm('사용하시겠습니까?')){
             const parent = opener.document.querySelector('#joinId');
-            parent.value = <%=id%>;
+            parent.value = "<%=id%>";
             parent.setAttribute('readonly', 'readonly');
             parent.setAttribute('style','background-color:lightgray;');
             window.close();
@@ -56,7 +56,6 @@
     const urlParams = new URL(location.href).searchParams;
     const name = urlParams.get('checkId');
     idText.value = name;
-    console.log(openJoinForm);
 
 </script>
 </body>
