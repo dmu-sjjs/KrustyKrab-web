@@ -1,6 +1,6 @@
 package js.krustykrab.domain;
 
-import js.krustykrab.dto.user.UserDto;
+import js.krustykrab.dto.UserDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

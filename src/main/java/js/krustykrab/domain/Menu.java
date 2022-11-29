@@ -1,6 +1,6 @@
 package js.krustykrab.domain;
 
-import js.krustykrab.dto.menu.MenuDto;
+import js.krustykrab.dto.MenuDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

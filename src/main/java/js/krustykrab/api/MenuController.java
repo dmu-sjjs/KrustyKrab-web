@@ -1,7 +1,7 @@
 package js.krustykrab.api;
 
 import com.opencsv.exceptions.CsvValidationException;
-import js.krustykrab.dto.menu.MenuDto;
+import js.krustykrab.dto.MenuDto;
 import js.krustykrab.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,6 @@ public class MenuController {
     @GetMapping("/{menuId}")
     public String showMenu(@PathVariable Long menuId, Model model, HttpServletRequest rq) throws UnsupportedEncodingException {
         MenuDto menu = menuService.findMenu(menuId);
-        rq.setCharacterEncoding("utf-8");
         model.addAttribute("menu", menu);
 
         return "showMenu"; // index : 임시값

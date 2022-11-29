@@ -3,7 +3,7 @@ package js.krustykrab.csv;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
-import js.krustykrab.dto.menu.MenuDto;
+import js.krustykrab.dto.MenuDto;
 import js.krustykrab.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

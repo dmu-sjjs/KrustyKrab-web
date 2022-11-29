@@ -1,4 +1,4 @@
-package js.krustykrab.dto.user;
+package js.krustykrab.dto;
 
 import js.krustykrab.domain.Authority;
 import js.krustykrab.domain.User;

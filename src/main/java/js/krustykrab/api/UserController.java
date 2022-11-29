@@ -67,6 +67,7 @@ public class UserController {
         boolean isDuplicate = userService.duplicationCheck(userDto.getId());
 
         rq.setAttribute("isDuplicate", false);
+        rq.setAttribute("id", userDto.getId());
         if(isDuplicate){
             rq.setAttribute("isDuplicate", true);
         }
