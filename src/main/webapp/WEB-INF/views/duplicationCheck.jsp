@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/login/duplicationCheck.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -24,10 +26,10 @@
 <%
     if (isDuplicate) {
 %>
-<form action="idDuplicationCheck" method="post" >
+<form class="duplicationForm" action="idDuplicationCheck" method="post" >
     <input id="duplicationCheckTextBox" type="text" name="id" ><br>
-    <input type="submit" value="확인">
-    <button onclick="window.close()" >취소</button>
+    <input id="duplicationSubmit" type="submit" value="확인">
+    <button id="duplicationCancel" onclick="window.close()" >취소</button>
 </form><nobr>
 
 <%

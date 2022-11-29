@@ -46,9 +46,9 @@
                 <input type="text" id="sample4_extraAddress" placeholder="참고항목"><br>
 
                 전화번호<br>
-                <input maxlength="12" required id="phoneNum" type="text" name="phoneNumber" placeholder="010-0000-0000" ><br>
+                <input maxlength="12" required id="phoneNum" type="text" name="phoneNumber" placeholder="010-0000-0000" >
 
-                <input id="joinSubmit" type="submit" value="가입">
+                <input id="joinSubmit" type="submit" value="가입하기">
             </form>
         </div>
         <div class="social_login">

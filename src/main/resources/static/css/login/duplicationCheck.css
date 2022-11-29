@@ -1,0 +1,19 @@
+body{
+    padding: 50px;
+}
+
+.duplicationForm > input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#duplicationSubmit, #duplicationCancel {
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+}
