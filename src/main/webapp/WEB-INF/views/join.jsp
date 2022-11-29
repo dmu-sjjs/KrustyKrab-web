@@ -37,12 +37,12 @@
                 <input required type="text" name="username" placeholder="홍길동"><br>
 
                 주소<br>
-                <input type="text" id="sample4_postcode" placeholder="우편번호">
+                <input readonly required type="text" id="sample4_postcode" placeholder="우편번호">
                 <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-                <input type="text" id="sample4_roadAddress" placeholder="도로명주소" name="address">
-                <input type="text" id="sample4_jibunAddress" placeholder="지번주소">
+                <input readonly required type="text" id="sample4_roadAddress" placeholder="도로명주소" name="address">
+                <input readonly type="text" id="sample4_jibunAddress" placeholder="지번주소">
                 <span id="guide" style="color:#999;display:none"></span>
-                <input type="text" id="sample4_detailAddress" placeholder="상세주소" name="detailAddress">
+                <input required type="text" id="sample4_detailAddress" placeholder="상세주소" name="detailAddress">
                 <input type="text" id="sample4_extraAddress" placeholder="참고항목"><br>
 
                 전화번호<br>
