@@ -28,7 +28,7 @@
             <h2>일반 회원가입</h2>
             <form action="/user/join" method="post" >
                 아이디<br>
-                <input required id="joinId" type="text" name="id" ><a href="#" id="overlap">중복확인</a><br>
+                <input required id="joinId" type="text" name="id" ><a id="overlap">중복확인</a><br>
 
                 비밀번호<br>
                 <input required type="text" name="pw"><br>
@@ -62,11 +62,11 @@
     <%@ include file="footer.jsp"%>
     <!-- End footer -->
 </footer>
-<script src="/resources/js/overlapCheck.js"></script>
+
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="/resources/js/address.js"></script>
 <script src="https://kit.fontawesome.com/32e5e610fe.js" crossorigin="anonymous"></script>
-
+<script src="/resources/js/overlapCheck.js"></script>
 </body>
 
 </html>
