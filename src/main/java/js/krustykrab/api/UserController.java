@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -75,16 +76,13 @@ public class UserController {
         return "duplicationCheck";
     }
 
-
     @GetMapping("/joinSuccess")
     public String joinSuccess() {
-        return "redirect:joinSuccess";
+        return "redirect:/";
     }
 
     @GetMapping("/joinFail")
     public String joinFail() {
         return "joinFail";
     }
-
-
 }

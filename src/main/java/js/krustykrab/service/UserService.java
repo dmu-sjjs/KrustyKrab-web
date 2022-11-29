@@ -6,6 +6,8 @@ import js.krustykrab.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -30,17 +32,31 @@ public class UserService {
     public UserDto login(UserDto userLoginDto) {
 
         Optional<User> optionalUser = userRepository.findByIdAndPw(userLoginDto.getId(), userLoginDto.getPw());
-        if(optionalUser.isEmpty()){
+        if (optionalUser.isEmpty()) {
             return null;
         }
         return optionalUser.get().toDto();
     }
 
-    public boolean duplicationCheck(String id){
+    public boolean duplicationCheck(String id) {
         Optional<User> user = userRepository.findById(id);
-        if(user.isPresent()){
+        if (user.isPresent()) {
             return true;
         }
         return false;
+    }
+
+    public List<UserDto> findAllUser() {
+        return userListToDto(userRepository.findAll());
+    }
+
+
+    private List<UserDto> userListToDto(List<User> users) {
+        List<UserDto> userDtos = new ArrayList<>();
+        users.forEach(user -> {
+            userDtos.add(user.toDto());
+        });
+
+        return userDtos;
     }
 }

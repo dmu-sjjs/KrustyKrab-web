@@ -30,8 +30,11 @@ public class User {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "location")
-    private String location;
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "detailAddress")
+    private String detailAddress;
 
     @Column(name = "phoneNumber")
     private String phoneNumber;
@@ -40,12 +43,13 @@ public class User {
     @Column(name = "authority")
     private Authority authority;
 
-    public UserDto toDto(){
+    public UserDto toDto() {
         return UserDto.builder()
                 .userId(userId)
                 .id(id).pw(pw)
                 .username(username)
-                .location(location)
+                .address(address)
+                .detailAddress(detailAddress)
                 .phoneNumber(phoneNumber)
                 .authority(authority.name())
                 .build();

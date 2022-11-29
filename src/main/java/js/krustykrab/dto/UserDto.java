@@ -15,33 +15,29 @@ import lombok.Setter;
 public class UserDto {
 
     private Long userId;
-
     private String id;
-
     private String pw;
-
     private String username;
-
-    private String location;
-
+    private String address;
+    private String detailAddress;
     private String phoneNumber;
-
     private String authority;
 
-    public User toEntity(){
+    public User toEntity() {
         checkAuthority();
         return User.builder()
                 .userId(userId)
                 .id(id).pw(pw)
                 .username(username)
-                .location(location)
+                .address(address)
+                .detailAddress(detailAddress)
                 .phoneNumber(phoneNumber)
                 .authority(Authority.valueOf(authority))
                 .build();
     }
 
-    private void checkAuthority(){
-        if(authority == null){
+    private void checkAuthority() {
+        if (authority == null) {
             authority = Authority.USER.name();
         }
     }
