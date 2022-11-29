@@ -1,6 +1,6 @@
 package js.krustykrab.api;
 
-import js.krustykrab.dto.user.UserDto;
+import js.krustykrab.dto.UserDto;
 import js.krustykrab.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     private final UserService userService;
 
-
+    // 로그인 관련
     @GetMapping("/login")
     public String toLoginForm() {
         return "loginForm";
@@ -34,6 +35,13 @@ public class UserController {
         return "redirect:login";
     }
 
+    @GetMapping("/logout")
+    public String logout(HttpSession session){
+        session.removeAttribute("user");
+        return "redirect:/";
+    }
+
+    // 회원가입 관련
     @GetMapping("/join")
     public String toJoinForm() {
         return "join";
@@ -49,9 +57,27 @@ public class UserController {
         return "redirect:joinFail";
     }
 
+    @GetMapping("/join/idDuplicationCheck")
+    public String toIdDuplicationCheckForm() {
+        return "duplicationCheck";
+    }
+
+    @PostMapping("/join/idDuplicationCheck")
+    public String idDuplicationCheck(UserDto userDto, HttpServletRequest rq) {
+        boolean isDuplicate = userService.duplicationCheck(userDto.getId());
+
+        rq.setAttribute("isDuplicate", false);
+        if(isDuplicate){
+            rq.setAttribute("isDuplicate", true);
+        }
+
+        return "duplicationCheck";
+    }
+
+
     @GetMapping("/joinSuccess")
     public String joinSuccess() {
-        return "joinSuccess";
+        return "redirect:joinSuccess";
     }
 
     @GetMapping("/joinFail")
@@ -59,10 +85,5 @@ public class UserController {
         return "joinFail";
     }
 
-    @GetMapping("/logout")
-    public String logout(HttpSession session){
-        session.removeAttribute("user");
-        return "redirect:/";
-    }
 
 }
