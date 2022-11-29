@@ -35,7 +35,7 @@ public class UserController {
         }
         System.out.println("로그인 실패!");
         model.addAttribute("isLoginSuccess", false);
-        return "redirect:joinFail";
+        return "redirect:loginFail";
     }
 
     @GetMapping("/logout")
@@ -55,7 +55,7 @@ public class UserController {
         userDto = userService.join(userDto);
         if (userDto != null) {
             session.setAttribute("joinedUser", userDto);
-            return "redirect:joinSuccess";
+            return "redirect:/";
         }
         return "redirect:joinFail";
     }
@@ -81,5 +81,10 @@ public class UserController {
     @GetMapping("/joinFail")
     public String joinFail() {
         return "joinFail";
+    }
+
+    @GetMapping("/loginFail")
+    public String loginFail() {
+        return "loginFail";
     }
 }
