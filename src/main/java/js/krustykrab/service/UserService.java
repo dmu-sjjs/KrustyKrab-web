@@ -6,6 +6,7 @@ import js.krustykrab.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -46,13 +47,13 @@ public class UserService {
         return false;
     }
 
-    public List<UserDto> findAllUser() {
+    public ArrayList<UserDto> findAllUser() {
         return userListToDto(userRepository.findAll());
     }
 
 
-    private List<UserDto> userListToDto(List<User> users) {
-        List<UserDto> userDtos = new ArrayList<>();
+    private ArrayList<UserDto> userListToDto(List<User> users) {
+        ArrayList<UserDto> userDtos = new ArrayList<>();
         users.forEach(user -> {
             userDtos.add(user.toDto());
         });
