@@ -8,7 +8,10 @@
     <title>The Krusty Krab</title>
 </head>
 <body>
-<script>alert('회원가입 실패!')</script>
+<script>
+    alert('회원가입 실패!');
+    location.href="/user/join";
+</script>
 
 </body>
 </html>

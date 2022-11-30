@@ -9,7 +9,10 @@
 </head>
 <body>
 <header>
-    <script>alert('로그인 실패! 아이디 또는 비밀번호를 다시 확인해주세요!')</script>
+    <script>
+        alert('로그인 실패! 아이디 또는 비밀번호를 다시 확인해주세요!');
+        location.href = "/user/login";
+    </script>
 </header>
 <main>
 
