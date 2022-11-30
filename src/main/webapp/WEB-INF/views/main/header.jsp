@@ -19,6 +19,13 @@
         %>
         <div id=member>
             <a class="taga" href="/user/logout"><strong>로그아웃</strong></a>
+            <%
+                if(userDto.getAuthority().equals("ADMIN")){
+            %>
+                    <a class="taga" href="/admin/main"><strong>관리자 페이지</strong></a>
+            <%
+            }
+            %>
         </div>
         <%
     }
