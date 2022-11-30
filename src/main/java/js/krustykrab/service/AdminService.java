@@ -1,11 +1,10 @@
 package js.krustykrab.service;
 
-import js.krustykrab.domain.Authority;
 import js.krustykrab.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import static js.krustykrab.domain.Authority.ADMIN;
+import static js.krustykrab.domain.menu.Authority.ADMIN;
 
 @Service
 @RequiredArgsConstructor
