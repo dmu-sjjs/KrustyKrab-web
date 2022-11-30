@@ -1,5 +1,5 @@
 package js.krustykrab.domain.menu;
 
 public enum MenuType {
-    BURGER, DESERT, DRINK, SIDE
+    BURGER, DESERT, DRINK, SIDE, SET
 }
