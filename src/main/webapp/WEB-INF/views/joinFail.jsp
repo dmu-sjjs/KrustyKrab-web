@@ -9,7 +9,7 @@
 </head>
 <body>
 <script>
-    alert('회원가입 실패!');
+    alert('회원가입 실패!\n아이디 중복 체크 또는 입력 값을 확인해주세요!');
     location.href="/user/join";
 </script>
 

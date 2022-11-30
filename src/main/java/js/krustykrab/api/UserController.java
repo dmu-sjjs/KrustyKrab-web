@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -48,9 +49,9 @@ public class UserController {
     }
 
     @PostMapping("/join")
-    public String join(UserDto userDto, HttpSession session) {
+    public String join(@RequestParam("idDuplicationCheck") String dupCheck, UserDto userDto, HttpSession session) {
         userDto = userService.join(userDto);
-        if (userDto != null) {
+        if (userDto != null && dupCheck.equals("1")) {
             session.setAttribute("joinedUser", userDto);
             return "redirect:/";
         }
@@ -84,4 +85,6 @@ public class UserController {
     public String loginFail() {
         return "loginFail";
     }
+
+//    private boolean authorityCheck
 }
