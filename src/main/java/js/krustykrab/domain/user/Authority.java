@@ -1,4 +1,4 @@
-package js.krustykrab.domain.menu;
+package js.krustykrab.domain.user;
 
 public enum Authority {
     USER, ADMIN

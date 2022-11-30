@@ -4,7 +4,7 @@ import js.krustykrab.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import static js.krustykrab.domain.menu.Authority.ADMIN;
+import static js.krustykrab.domain.user.Authority.ADMIN;
 
 @Service
 @RequiredArgsConstructor

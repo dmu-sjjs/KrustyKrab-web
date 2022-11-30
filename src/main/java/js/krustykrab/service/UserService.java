@@ -1,7 +1,7 @@
 package js.krustykrab.service;
 
 import js.krustykrab.dao.UserRepository;
-import js.krustykrab.domain.User;
+import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

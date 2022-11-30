@@ -1,6 +1,6 @@
 package js.krustykrab.dao;
 
-import js.krustykrab.domain.User;
+import js.krustykrab.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

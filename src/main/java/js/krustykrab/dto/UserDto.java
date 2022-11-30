@@ -1,7 +1,7 @@
 package js.krustykrab.dto;
 
-import js.krustykrab.domain.menu.Authority;
-import js.krustykrab.domain.User;
+import js.krustykrab.domain.user.Authority;
+import js.krustykrab.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

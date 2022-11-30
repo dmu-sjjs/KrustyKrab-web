@@ -1,6 +1,6 @@
 package js.krustykrab.domain;
 
-import js.krustykrab.domain.menu.Authority;
+import js.krustykrab.domain.user.Authority;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
