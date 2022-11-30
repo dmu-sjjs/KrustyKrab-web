@@ -9,8 +9,7 @@
 </head>
 <body>
 <header>
-    <h2>로그인 실패</h2>
-    아이디 또는 패스워드를 확인해주세요
+    <script>alert('로그인 실패! 아이디 또는 비밀번호를 다시 확인해주세요!')</script>
 </header>
 <main>
 

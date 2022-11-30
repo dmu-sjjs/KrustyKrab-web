@@ -8,14 +8,7 @@
     <title>The Krusty Krab</title>
 </head>
 <body>
-<header>
-    <h2>가입 실패</h2>
-    회원가입에 실패하였습니다.
-</header>
-<main>
+<script>alert('회원가입 실패!')</script>
 
-</main>
-<footer>
-</footer>
 </body>
 </html>
