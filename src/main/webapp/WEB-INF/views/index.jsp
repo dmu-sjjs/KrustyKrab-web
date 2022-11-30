@@ -3,13 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="resources/css/main/header.css">
-    <link rel="stylesheet" href="resources/css/main/sns.css">
-    <link rel="stylesheet" href="resources/css/main/header.css">
-    <link rel="stylesheet" href="resources/css/main/youtube.css">
-    <link rel="stylesheet" href="resources/css/footer.css">
-    <link rel="shortcut icon" href="resources/img/favicon.png" type="image/x-icon">
-    <link rel="icon" href="resources/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
     <title>The Krusty Krab</title>
     <%@include file="main/csslink.jsp" %>
 </head>
