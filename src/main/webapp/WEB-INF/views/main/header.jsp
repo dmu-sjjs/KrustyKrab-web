@@ -38,7 +38,7 @@
 
         <li class="menutitle">매장소개▾
             <ul class="submenu">
-                <li><a class="taga" href="#">매장 찾기</a></li>
+                <li><a class="taga" href="/store/all">매장 찾기</a></li>
             </ul>
         </li>
 

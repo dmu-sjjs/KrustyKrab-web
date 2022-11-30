@@ -3,8 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../../../resources/img/favicon.png" type="image/x-icon">
-    <link rel="icon" href="../../../resources/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
     <title>The Krusty Krab</title>
 </head>
 <body>
