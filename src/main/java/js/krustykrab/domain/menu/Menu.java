@@ -1,4 +1,4 @@
-package js.krustykrab.domain;
+package js.krustykrab.domain.menu;
 
 import js.krustykrab.dto.MenuDto;
 import lombok.AllArgsConstructor;
@@ -30,12 +30,25 @@ public class Menu {
     @Column(name = "price")
     private int price;
 
+    @Column(name = "menuType")
+    @Enumerated(value = EnumType.STRING)
+    private MenuType menuType;
+
+    @Column(name = "isSale")
+    private boolean isSale;
+
+    @Column(name = "saleRate")
+    private int saleRate;
+
     public MenuDto toDto(){
         return MenuDto.builder()
                 .menuId(menuId)
                 .menuName(menuName)
                 .menuDescription(menuDescription)
                 .price(price)
+                .menuType(menuType.name())
+                .isSale(isSale)
+                .saleRate(saleRate)
                 .build();
     }
 }

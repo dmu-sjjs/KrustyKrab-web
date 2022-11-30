@@ -28,11 +28,11 @@
     <div id="menubars">
         <li class="menutitle">메뉴소개▾
             <ul class="submenu">
-                <li><a class="taga" href="#">할인</a></li>
-                <li><a class="taga" href="#">신제품</a></li>
-                <li><a class="taga" href="#">버거</a></li>
-                <li><a class="taga" href="#">사이드</a></li>
-                <li><a class="taga" href="#">음료&디저트</a></li>
+                <li><a class="taga" href="/menu/sale">할인</a></li>
+                <li><a class="taga" href="/menu/BURGER">버거</a></li>
+                <li><a class="taga" href="/menu/SIDE">사이드</a></li>
+                <li><a class="taga" href="/menu/DRINK">음료</a></li>
+                <li><a class="taga" href="/menu/DESERT">디저트</a></li>
             </ul>
         </li>
 

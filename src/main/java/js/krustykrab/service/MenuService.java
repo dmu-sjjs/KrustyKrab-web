@@ -3,6 +3,8 @@ package js.krustykrab.service;
 import com.opencsv.exceptions.CsvValidationException;
 import js.krustykrab.csv.MenuCsvParser;
 import js.krustykrab.dao.MenuRepository;
+import js.krustykrab.domain.menu.Menu;
+import js.krustykrab.domain.menu.MenuType;
 import js.krustykrab.dto.MenuDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -36,7 +38,26 @@ public class MenuService {
         return allMenu;
     }
 
+    public ArrayList<MenuDto> findMenuByMenuType(String menuType) {
+        List<Menu> menus = menuRepository.findByMenuType(MenuType.valueOf(menuType));
+        return menuListToDto(menus);
+    }
+
+    public ArrayList<MenuDto> findSaleMenus(){
+        List<Menu> menus = menuRepository.findByIsSale(true);
+        return menuListToDto(menus);
+    }
+
     public void save(MenuDto menuDto) {
         menuRepository.save(menuDto.toEntity());
+    }
+
+    private ArrayList<MenuDto> menuListToDto(List<Menu> menus) {
+        ArrayList<MenuDto> menuDtos = new ArrayList<>();
+        menus.forEach(menu -> {
+            menuDtos.add(menu.toDto());
+        });
+
+        return menuDtos;
     }
 }

@@ -1,15 +1,79 @@
-burger1,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger2,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger3,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger4,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger5,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger6,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,3400
-burger7,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,3400
-burger8,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,3400
-burger9,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,3400
-burger10,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,3400
-burger11,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger12,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,2200
-burger13,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,5500
-burger14,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,5500
-burger15,JMT �����̴�. ���� �Դٰ� �� �� �׾ ���� ���� ���� ������ ����.,5500
+burger1,JMT�Դϴ�!,2200,BURGER,1,10
+burger2,JMT�Դϴ�!,2200,DESERT,1,10
+burger3,JMT�Դϴ�!,2200,DRINK,0,0
+burger4,JMT�Դϴ�!,2200,DESERT,0,0
+burger5,JMT�Դϴ�!,2200,DRINK,0,0
+burger6,JMT�Դϴ�!,3400,SIDE,0,0
+burger7,JMT�Դϴ�!,2200,BURGER,1,10
+burger8,JMT�Դϴ�!,2200,DESERT,1,10
+burger9,JMT�Դϴ�!,3400,DRINK,0,0
+burger10,JMT�Դϴ�!,3400,SIDE,1,20
+burger11,JMT�Դϴ�!,3400,BURGER,1,30
+burger12,JMT�Դϴ�!,3400,BURGER,1,30
+burger13,JMT�Դϴ�!,2200,BURGER,0,0
+burger14,JMT�Դϴ�!,2200,DESERT,0,0
+burger15,JMT�Դϴ�!,5500,DRINK,0,0
+burger16,JMT�Դϴ�!,3400,BURGER,0,0
+burger17,JMT�Դϴ�!,2200,BURGER,0,0
+burger18,JMT�Դϴ�!,2200,DESERT,0,0
+burger19,JMT�Դϴ�!,5500,DRINK,0,0
+burger20,JMT�Դϴ�!,2200,DESERT,0,0
+burger21,JMT�Դϴ�!,3400,DRINK,1,10
+burger22,JMT�Դϴ�!,3400,SIDE,1,10
+burger23,JMT�Դϴ�!,3400,BURGER,0,0
+burger24,JMT�Դϴ�!,3400,BURGER,0,0
+burger25,JMT�Դϴ�!,2200,BURGER,0,0
+burger26,JMT�Դϴ�!,2200,DESERT,0,0
+burger27,JMT�Դϴ�!,5500,DRINK,1,10
+burger28,JMT�Դϴ�!,5500,DRINK,1,10
+burger29,JMT�Դϴ�!,2200,DESERT,0,0
+burger30,JMT�Դϴ�!,2200,DRINK,1,20
+burger31,JMT�Դϴ�!,3400,SIDE,1,30
+burger32,JMT�Դϴ�!,3400,BURGER,1,30
+burger33,JMT�Դϴ�!,3400,DRINK,0,0
+burger34,JMT�Դϴ�!,3400,SIDE,0,0
+burger35,JMT�Դϴ�!,3400,BURGER,0,0
+burger36,JMT�Դϴ�!,3400,BURGER,0,0
+burger37,JMT�Դϴ�!,2200,BURGER,0,0
+burger38,JMT�Դϴ�!,2200,DESERT,0,0
+burger39,JMT�Դϴ�!,5500,DRINK,0,0
+burger40,JMT�Դϴ�!,2200,DESERT,0,0
+burger41,JMT�Դϴ�!,3400,DRINK,0,0
+burger42,JMT�Դϴ�!,3400,SIDE,0,0
+burger43,JMT�Դϴ�!,3400,DRINK,0,0
+burger44,JMT�Դϴ�!,3400,SIDE,0,0
+burger45,JMT�Դϴ�!,3400,BURGER,0,0
+burger46,JMT�Դϴ�!,3400,BURGER,0,0
+burger47,JMT�Դϴ�!,2200,BURGER,0,0
+burger48,JMT�Դϴ�!,2200,DESERT,0,0
+burger49,JMT�Դϴ�!,3400,DRINK,0,0
+burger50,JMT�Դϴ�!,3400,SIDE,0,0
+burger51,JMT�Դϴ�!,3400,BURGER,0,0
+burger52,JMT�Դϴ�!,3400,BURGER,0,0
+burger53,JMT�Դϴ�!,2200,BURGER,0,0
+burger54,JMT�Դϴ�!,2200,DESERT,0,0
+burger55,JMT�Դϴ�!,5500,DRINK,0,0
+burger56,JMT�Դϴ�!,3400,SIDE,0,0
+burger57,JMT�Դϴ�!,3400,DRINK,0,0
+burger58,JMT�Դϴ�!,3400,SIDE,0,0
+burger59,JMT�Դϴ�!,3400,BURGER,0,0
+burger60,JMT�Դϴ�!,3400,BURGER,0,0
+burger61,JMT�Դϴ�!,2200,BURGER,1,10
+burger62,JMT�Դϴ�!,2200,DESERT,1,10
+burger63,JMT�Դϴ�!,5500,DRINK,0,0
+burger64,JMT�Դϴ�!,3400,BURGER,0,0
+burger65,JMT�Դϴ�!,2200,BURGER,0,0
+burger66,JMT�Դϴ�!,2200,DESERT,0,0
+burger67,JMT�Դϴ�!,5500,DRINK,1,10
+burger68,JMT�Դϴ�!,5500,DRINK,1,10
+burger69,JMT�Դϴ�!,3400,DRINK,0,0
+burger70,JMT�Դϴ�!,3400,SIDE,1,20
+burger71,JMT�Դϴ�!,3400,DRINK,1,30
+burger72,JMT�Դϴ�!,3400,DRINK,1,30
+burger73,JMT�Դϴ�!,3400,DRINK,0,0
+burger74,JMT�Դϴ�!,3400,SIDE,0,0
+burger75,JMT�Դϴ�!,3400,BURGER,0,0
+burger76,JMT�Դϴ�!,3400,BURGER,0,0
+burger77,JMT�Դϴ�!,2200,BURGER,0,0
+burger78,JMT�Դϴ�!,2200,DESERT,0,0
+burger79,JMT�Դϴ�!,5500,DRINK,0,0

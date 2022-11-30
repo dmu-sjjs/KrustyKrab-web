@@ -12,27 +12,6 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/main/menu/sale")
-    public String toSalePage() {
-        return "index";
-    }
-
-    @GetMapping("/main/menu/new")
-    public String toNewMenuPage() {
-        return "index";
-    }
-    @GetMapping("/main/menu/burger")
-    public String toBurgerMenuPage() {
-        return "index";
-    }
-    @GetMapping("/main/menu/side")
-    public String toSideMenuPage() {
-        return "index";
-    }
-    @GetMapping("/main/menu/drinkAndDesert")
-    public String toDrinkAndDesertPage() {
-        return "index";
-    }
     @GetMapping("/main/event")
     public String toEventPage() {
         return "index";
