@@ -42,6 +42,7 @@
             parent.value = "<%=id%>";
             parent.setAttribute('readonly', 'readonly');
             parent.setAttribute('style','background-color:lightgray;');
+            opener.document.querySelector('#idDuplicationChecking').value = "1";
             window.close();
         }else{
             window.close();

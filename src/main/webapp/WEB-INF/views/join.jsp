@@ -29,7 +29,7 @@
             <form class="joinForm" action="/user/join" method="post" >
                 아이디<br>
                 <input required id="joinId" type="text" name="id" placeholder="ID" ><a id="overlap">중복확인</a><br>
-
+                <input id="idDuplicationChecking" type="hidden" value="0" name="idDuplicationCheck" />
                 비밀번호<br>
                 <input required type="text" name="pw" placeholder="Password" ><br>
 
@@ -67,6 +67,7 @@
 <script src="/resources/js/address.js"></script>
 <script src="https://kit.fontawesome.com/32e5e610fe.js" crossorigin="anonymous"></script>
 <script src="/resources/js/overlapCheck.js"></script>
+
 </body>
 
 </html>
