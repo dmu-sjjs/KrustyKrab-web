@@ -5,28 +5,34 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="/resources/img/favicon.png" type="image/x-icon">
     <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
+    <%@include file="../main/csslink.jsp" %>
+    <link rel="stylesheet" href="/resources/css/menu/burger.css">
     <title>The Krusty Krab</title>
 </head>
 <body>
 <header>
-    <h1>버거</h1>
-    <form action="/" method="get">
-        <input type="submit" value="홈으로">
-    </form>
+    <jsp:include page="../main/header.jsp"/>
 </header>
-<main>
-    <br>
-    <table border="1">
-        <c:forEach var="m" items="${menus}">
-            <tr>
-                <td>${m.menuName}</td>
-                <td>${m.menuDescription}</td>
-                <td>${m.price}</td>
-            </tr>
+<div id="bg"></div>
+<main class="menu_main">
+    <h1>DESSERT</h1>
+    <table class="menu_table">
+        <tr>
+            <c:forEach var="m" items="${menus}" varStatus="status" >
+            <c:if test="${status.index%5==0}">
+        </tr><tr>
+        </c:if>
+        <td><img width="150" height="150" src="/resources/img/burger/burger${status.index+1}.png">
+            <br> ${m.menuName} <br>${m.price}<br>${m.menuDescription}</td>
         </c:forEach>
+    </tr>
     </table>
 </main>
 <footer>
+    <jsp:include page="../footer.jsp"/>
 </footer>
+<header>
+    <%@include file="../main/header.jsp"%>
+</header>
 </body>
 </html>

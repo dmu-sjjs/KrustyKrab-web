@@ -1,0 +1,15 @@
+.menu_main{
+    text-align: center;
+    width: 960px;
+    margin: auto;
+}
+
+.menu_table{
+    margin: auto;
+    text-align: center;
+}
+
+.menu_table > tbody > tr > td{
+    padding: 20px;
+}
+
