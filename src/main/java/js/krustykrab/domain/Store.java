@@ -25,10 +25,10 @@ public class Store {
     private String storeName;
 
     @Column(name = "storeLatitude")
-    private Long storeLatitude;
+    private String storeLatitude;
 
     @Column(name = "storeLongitude")
-    private Long storeLongitude;
+    private String storeLongitude;
 
     @Column(name = "storeTelNumber")
     private String storeTelNumber;

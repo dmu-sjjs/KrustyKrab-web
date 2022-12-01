@@ -14,8 +14,8 @@ import lombok.Setter;
 public class StoreDto {
     private Long storeId;
     private String storeName;
-    private Long storeLatitude;
-    private Long storeLongitude;
+    private String storeLatitude;
+    private String storeLongitude;
     private String storeTelNumber;
 
     public Store toEntity(){

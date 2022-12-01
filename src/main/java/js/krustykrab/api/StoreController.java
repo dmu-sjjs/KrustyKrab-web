@@ -1,5 +1,6 @@
 package js.krustykrab.api;
 
+import com.opencsv.exceptions.CsvValidationException;
 import js.krustykrab.dto.StoreDto;
 import js.krustykrab.service.StoreService;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -17,6 +19,12 @@ import java.util.List;
 @RequestMapping("store")
 public class StoreController {
     private final StoreService storeService;
+
+    @GetMapping("/add/default")
+    public String addDefaultStore() throws CsvValidationException, IOException {
+        storeService.addDefaultStore();
+        return "redirect:/";
+    }
 
     @PostMapping("/add")
     public String addStore(StoreDto storeDto) {

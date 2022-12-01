@@ -43,11 +43,10 @@ public class StoreCsvParser {
                     // menuDto 객체 생성하기
                     StoreDto storeDto = StoreDto.builder()
                             .storeName(storeData[0])
-                            .storeLatitude(Long.parseLong(storeData[1]))
-                            .storeLongitude(Long.parseLong(storeData[2]))
+                            .storeLatitude(storeData[1])
+                            .storeLongitude(storeData[2])
                             .storeTelNumber(storeData[3])
                             .build();
-
                     storeService.addStore(storeDto);   // DB에 INSERT
                 }
             } while (storeData != null);
