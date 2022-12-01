@@ -1,11 +1,15 @@
 package js.krustykrab.service;
 
+import com.opencsv.exceptions.CsvValidationException;
+import js.krustykrab.csv.menu.MenuCsvParser;
+import js.krustykrab.csv.store.StoreCsvParser;
 import js.krustykrab.dao.StoreRepository;
 import js.krustykrab.domain.Store;
 import js.krustykrab.dto.StoreDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +18,11 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class StoreService {
     private final StoreRepository storeRepository;
+
+
+    public void addDefaultStore() throws CsvValidationException, IOException {
+        StoreCsvParser.read(this);
+    }
 
     public StoreDto addStore(StoreDto storeDto){
         storeRepository.save(storeDto.toEntity());

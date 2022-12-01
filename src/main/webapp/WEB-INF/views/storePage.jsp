@@ -23,5 +23,6 @@
 </footer>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bb5a8f867f43c670b360f3bff1cf1359"></script>
 <script src="/resources/js/store.js"></script>
+
 </body>
 </html>

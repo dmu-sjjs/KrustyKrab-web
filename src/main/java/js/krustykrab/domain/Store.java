@@ -24,8 +24,11 @@ public class Store {
     @Column(name = "storeName")
     private String storeName;
 
-    @Column(name = "storeLocation")
-    private String storeLocation;
+    @Column(name = "storeLatitude")
+    private Long storeLatitude;
+
+    @Column(name = "storeLongitude")
+    private Long storeLongitude;
 
     @Column(name = "storeTelNumber")
     private String storeTelNumber;
@@ -35,7 +38,8 @@ public class Store {
         return StoreDto.builder()
                 .storeId(storeId)
                 .storeName(storeName)
-                .storeLocation(storeLocation)
+                .storeLatitude(storeLatitude)
+                .storeLongitude(storeLongitude)
                 .storeTelNumber(storeTelNumber)
                 .build();
     }

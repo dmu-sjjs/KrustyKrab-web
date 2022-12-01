@@ -14,13 +14,15 @@ import lombok.Setter;
 public class StoreDto {
     private Long storeId;
     private String storeName;
-    private String storeLocation;
+    private Long storeLatitude;
+    private Long storeLongitude;
     private String storeTelNumber;
 
     public Store toEntity(){
         return Store.builder()
                 .storeName(storeName)
-                .storeLocation(storeLocation)
+                .storeLatitude(storeLatitude)
+                .storeLongitude(storeLongitude)
                 .storeTelNumber(storeTelNumber)
                 .build();
     }
