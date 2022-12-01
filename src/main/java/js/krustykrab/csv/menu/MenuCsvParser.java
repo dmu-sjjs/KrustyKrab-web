@@ -1,4 +1,4 @@
-package js.krustykrab.csv;
+package js.krustykrab.csv.menu;
 
 
 import com.opencsv.CSVReader;
@@ -29,7 +29,7 @@ public class MenuCsvParser {
         try {
             //utf-8 형태로 csv 파일 파싱
             String[] menuData;
-            CSVReader csvReader = new CSVReader(new InputStreamReader(new FileInputStream(path + "/src/main/java/js/krustykrab/csv/menu.csv"), "EUC-KR"));
+            CSVReader csvReader = new CSVReader(new InputStreamReader(new FileInputStream(path + "/src/main/java/js/krustykrab/csv/menu/menu.csv"), "EUC-KR"));
 
             do {
                 menuData = csvReader.readNext();    // 한 라인 읽기 (자동으로 콤마 분리해서 배열에 저장 됌)

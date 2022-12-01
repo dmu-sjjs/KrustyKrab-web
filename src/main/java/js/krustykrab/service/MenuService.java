@@ -1,7 +1,7 @@
 package js.krustykrab.service;
 
 import com.opencsv.exceptions.CsvValidationException;
-import js.krustykrab.csv.MenuCsvParser;
+import js.krustykrab.csv.menu.MenuCsvParser;
 import js.krustykrab.dao.MenuRepository;
 import js.krustykrab.domain.menu.Menu;
 import js.krustykrab.domain.menu.MenuType;
