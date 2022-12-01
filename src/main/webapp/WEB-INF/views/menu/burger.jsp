@@ -15,7 +15,7 @@
 </header>
 <div id="bg"></div>
 <main class="menu_main">
-    <h1>DESSERT</h1>
+    <h1>BURGER</h1>
     <table class="menu_table">
         <tr>
             <c:forEach var="m" items="${menus}" varStatus="status" >
