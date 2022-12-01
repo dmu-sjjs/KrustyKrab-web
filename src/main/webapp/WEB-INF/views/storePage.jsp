@@ -8,41 +8,20 @@
     <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
     <title>The Krusty Krab</title>
     <%@include file="main/csslink.jsp" %>
+    <link rel="stylesheet" href="/resources/css/menu/store.css">
 </head>
 <body>
 <header>
     <jsp:include page="main/header.jsp"/>
 </header>
 <div id="bg"></div>
-<main style="height: 900px; padding-top: 100px;">
-    <div id="map" style="width:60%;height:450px; margin: 0 auto;"></div>
+<main style=" width:1440px; height: 900px; margin: 0 auto;">
+    <div id="map" style="width:100%;height:100%; margin: 0 auto;"></div>
 </main>
 <footer>
     <jsp:include page="footer.jsp"/>
 </footer>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bb5a8f867f43c670b360f3bff1cf1359"></script>
-<script>
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-        mapOption = {
-            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-            level: 3 // 지도의 확대 레벨
-        };
-
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-    // 마커가 표시될 위치입니다
-    var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667);
-
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
-
-    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-    // marker.setMap(null);
-</script>
+<script src="/resources/js/store.js"></script>
 </body>
 </html>
