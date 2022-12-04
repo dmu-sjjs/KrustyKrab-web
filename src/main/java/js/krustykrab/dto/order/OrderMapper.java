@@ -11,6 +11,5 @@ public interface OrderMapper {
 
 
     OrderDto orderEntityToDto(Order order);
-    Order orderDtoToEntity(OrderDto orderDto);
 
 }
