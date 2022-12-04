@@ -22,7 +22,7 @@
             <c:if test="${status.index%5==0}">
         </tr><tr>
         </c:if>
-        <td><img width="150" height="150" src="/resources/img/burger/burger${status.index+1}.png">
+        <td><img width="150" height="150" src="/resources/img/${m.menuType}/${m.menuName}.png">
             <br> ${m.menuName} <br>${m.price}<br>${m.menuDescription}</td>
         </c:forEach>
     </tr>

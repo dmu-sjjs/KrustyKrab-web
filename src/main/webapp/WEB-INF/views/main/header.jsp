@@ -35,7 +35,7 @@
     <div id="menubars">
         <li class="menutitle">메뉴소개▾
             <ul class="submenu">
-                <li><a class="taga" href="/menu/sale">할인</a></li>
+                <li><a class="taga" href="/menu/sale">세트</a></li>
                 <li><a class="taga" href="/menu/BURGER">버거</a></li>
                 <li><a class="taga" href="/menu/SIDE">사이드</a></li>
                 <li><a class="taga" href="/menu/DRINK">음료</a></li>
