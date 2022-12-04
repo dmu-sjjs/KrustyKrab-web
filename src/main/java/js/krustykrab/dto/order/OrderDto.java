@@ -1,6 +1,5 @@
 package js.krustykrab.dto.order;
 
-import js.krustykrab.domain.Order;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,5 +1,6 @@
 package js.krustykrab.domain;
 
+import js.krustykrab.domain.order.Order;
 import js.krustykrab.domain.user.Authority;
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDto;

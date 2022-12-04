@@ -1,6 +1,6 @@
 package js.krustykrab.dto.order;
 
-import js.krustykrab.domain.Order;
+import js.krustykrab.domain.order.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
