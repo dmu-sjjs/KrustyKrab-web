@@ -13,4 +13,9 @@ public class Cart {
     public List<CartItem> getCart() {
         return cart;
     }
+
+    public List<CartItem> addItem(CartItem item) {
+        cart.add(item);
+        return cart;
+    }
 }
