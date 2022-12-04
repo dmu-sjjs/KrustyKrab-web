@@ -23,7 +23,7 @@ public class OrderController {
     public String toOrderPage(@PathVariable Long storeId, HttpSession session, Model model) {
         UserDto userDto = (UserDto) session.getAttribute("user");
 
-        if(userDto != null) {
+        if (userDto != null) {
             model.addAttribute("storeId", storeId);
             return "/order/orderPage";
         }
@@ -31,13 +31,13 @@ public class OrderController {
         return "redirect:/user/login";
     }
 
-//    @PostMapping("/{storeId}")
-//    public String order(@PathVariable Long storeId, HttpSession session) {
-//        Cart cart = (Cart) session.getAttribute("cart");
-//        session.removeAttribute("cart");
-//
-//
-//    }
+    @PostMapping("/{storeId}")
+    public String order(@PathVariable Long storeId, HttpSession session) {
+        Cart cart = (Cart) session.getAttribute("cart");
+        session.removeAttribute("cart");
+
+
+    }
 
     @GetMapping("/select")
     public String toMenuSelectPage(Model model) {

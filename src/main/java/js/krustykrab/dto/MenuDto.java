@@ -19,8 +19,20 @@ public class MenuDto {
     private boolean isSale;
     private int saleRate;
 
-    public Menu toEntity(){
+    public Menu toEntity() {
         return Menu.builder()
+                .menuName(menuName)
+                .menuDescription(menuDescription)
+                .price(price)
+                .menuType(MenuType.valueOf(menuType))
+                .isSale(isSale)
+                .saleRate(saleRate)
+                .build();
+    }
+
+    public Menu toHasIdEntity() {
+        return Menu.builder()
+                .menuId(menuId)
                 .menuName(menuName)
                 .menuDescription(menuDescription)
                 .price(price)

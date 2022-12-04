@@ -4,6 +4,7 @@ import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDto;
 import js.krustykrab.dto.order.OrderMapper;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import static javax.persistence.FetchType.LAZY;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "ORDER")
 public class Order {
 
@@ -39,7 +41,7 @@ public class Order {
     @Column(name = "isCompleted")
     private Boolean isCompleted;
 
-    public OrderDto toDto(){
+    public OrderDto toDto() {
         OrderDto orderDto = OrderMapper.mapper.orderEntityToDto(this);
         orderDto.setUserId(user.getUserId());
         return orderDto;
