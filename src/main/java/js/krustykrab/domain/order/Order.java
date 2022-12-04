@@ -18,7 +18,7 @@ import static javax.persistence.FetchType.LAZY;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "ORDER")
+@Table(name = "ORDER_INFO")
 public class Order {
 
     @Id
@@ -26,11 +26,11 @@ public class Order {
     @Column(name = "orderId")
     private Long orderId;
 
-    @ManyToOne(fetch = LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "userId")
     private User user;
 
-    @OneToOne(fetch = LAZY)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "storeId")
     private Store store;
 

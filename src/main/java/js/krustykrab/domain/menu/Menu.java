@@ -40,6 +40,8 @@ public class Menu {
     @Column(name = "saleRate")
     private int saleRate;
 
+
+
     public MenuDto toDto(){
         return MenuDto.builder()
                 .menuId(menuId)

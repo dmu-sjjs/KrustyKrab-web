@@ -26,4 +26,13 @@ public class StoreDto {
                 .storeTelNumber(storeTelNumber)
                 .build();
     }
+    public Store toHasIdEntity(){
+        return Store.builder()
+                .storeId(storeId)
+                .storeName(storeName)
+                .storeLatitude(storeLatitude)
+                .storeLongitude(storeLongitude)
+                .storeTelNumber(storeTelNumber)
+                .build();
+    }
 }

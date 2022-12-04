@@ -3,6 +3,8 @@ package js.krustykrab.domain.order;
 import js.krustykrab.domain.menu.Menu;
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDetailDto;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +14,7 @@ import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "ORDER_DETAIL")
 public class OrderDetail {
 
@@ -20,15 +23,15 @@ public class OrderDetail {
     @Column(name = "orderDetailId")
     private Long orderDetailId;
 
-    @ManyToOne(fetch = LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "orderId")
     private Order order;
 
-    @ManyToOne(fetch = LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "userId")
     private User user;
 
-    @OneToOne(fetch = LAZY)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "menuId")
     private Menu menu;
 

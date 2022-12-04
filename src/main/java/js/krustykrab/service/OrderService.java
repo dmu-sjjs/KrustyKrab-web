@@ -18,8 +18,9 @@ public class OrderService {
 
     public Order saveOrder(OrderDto orderDto, Long storeId) {
         User user = userService.findById(orderDto.getUserId()).toEntity();
-        Store store = storeService.findStoreById(storeId).toEntity();
-        return orderRepository.save(orderDto.toEntity(user, store));
+        Store store = storeService.findStoreById(storeId).toHasIdEntity();
+        Order order = orderDto.toEntity(user, store);
+        return orderRepository.save(order);
     }
 
     public OrderDto findOrderById(Long orderId) {

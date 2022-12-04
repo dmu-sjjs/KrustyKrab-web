@@ -23,7 +23,8 @@ public class OrderDetailService {
 
         for (CartItem item : items) {
             Menu menu = menuService.findMenu(item.getMenuId()).toHasIdEntity();
-            orderDetailRepository.save(new OrderDetail(order, order.getUser(), menu, item.getCount()));
+            OrderDetail orderDetail = new OrderDetail(order, order.getUser(), menu, item.getCount());
+            orderDetailRepository.save(orderDetail);
         }
     }
 }
