@@ -9,6 +9,7 @@
     <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
     <%@include file="../login/csslink.jsp"%>
+    <link rel="stylesheet" href="/resources/css/order/order.css">
     <title>The Krusty Krab</title>
 </head>
 <body>
@@ -16,24 +17,27 @@
 <div class="dummy"></div>
 <div class="path">
     <a href="/">홈</a> >
-    <a href="#"><strong>로그인</strong></a>
+    <a href="#"><strong>딜리버리</strong></a>
 </div>
-<main class="loginMain">
-
+<main class="orderMain">
+    <h1>주문</h1>
+    <button onclick="selectMenuPage()" >메뉴 선택</button>
+    <button>수제버거 선택</button>
 </main>
+<div class="orderBtn">
+    <button>주문하기</button>
+</div>
 <footer>
     <!-- footer -->
     <%@ include file="../footer.jsp"%>
     <!-- End footer -->
 </footer>
-<script src="/resources/js/autoHypenPhoneNumber.js"></script>
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="/resources/js/address.js"></script>
-<script src="https://kit.fontawesome.com/32e5e610fe.js" crossorigin="anonymous"></script>
-<script src="/resources/js/overlapCheck.js"></script>
-
 </body>
-
+<script>
+    function selectMenuPage() {
+        window.open('/order/select', 'window_name', 'width=800, height=600, scrollbars=yes');
+    }
+</script>
 </html>
 
 
