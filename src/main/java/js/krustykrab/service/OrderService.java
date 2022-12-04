@@ -1,6 +1,7 @@
 package js.krustykrab.service;
 
 import js.krustykrab.dao.OrderRepository;
+import js.krustykrab.domain.Store;
 import js.krustykrab.domain.cart.Cart;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.domain.user.User;
@@ -13,10 +14,12 @@ import org.springframework.stereotype.Service;
 public class OrderService {
     private final OrderRepository orderRepository;
     private final UserService userService;
+    private final StoreService storeService;
 
-    public Order saveOrder(OrderDto orderDto) {
+    public Order saveOrder(OrderDto orderDto, Long storeId) {
         User user = userService.findById(orderDto.getUserId()).toEntity();
-        return orderRepository.save(orderDto.toEntity(user));
+        Store store = storeService.findStoreById(storeId).toEntity();
+        return orderRepository.save(orderDto.toEntity(user, store));
     }
 
     public OrderDto findOrderById(Long orderId) {

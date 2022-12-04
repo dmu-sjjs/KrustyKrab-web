@@ -1,5 +1,6 @@
 package js.krustykrab.domain.order;
 
+import js.krustykrab.domain.Store;
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDto;
 import js.krustykrab.dto.order.OrderMapper;
@@ -29,6 +30,10 @@ public class Order {
     @JoinColumn(name = "userId")
     private User user;
 
+    @OneToOne(fetch = LAZY)
+    @JoinColumn(name = "storeId")
+    private Store store;
+
     @Column(name = "address")
     private String address;
 
@@ -44,6 +49,7 @@ public class Order {
     public OrderDto toDto() {
         OrderDto orderDto = OrderMapper.mapper.orderEntityToDto(this);
         orderDto.setUserId(user.getUserId());
+        orderDto.setStoreId(store.getStoreId());
         return orderDto;
     }
 }
