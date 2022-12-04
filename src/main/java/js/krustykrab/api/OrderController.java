@@ -2,6 +2,7 @@ package js.krustykrab.api;
 
 import js.krustykrab.domain.cart.Cart;
 import js.krustykrab.domain.order.Order;
+import js.krustykrab.dto.StoreDto;
 import js.krustykrab.dto.UserDto;
 import js.krustykrab.dto.order.OrderDto;
 import js.krustykrab.service.MenuService;
@@ -40,14 +41,14 @@ public class OrderController {
         return "redirect:/user/login";
     }
 
-    @PostMapping("/{storeId}")
-    public String order(@PathVariable Long storeId, HttpSession session) {
+    @PostMapping
+    public String order(StoreDto storeDto, HttpSession session) {
         Cart cart = (Cart) session.getAttribute("cart");
         UserDto user = (UserDto)session.getAttribute("user");
-        OrderDto orderDto = new OrderDto(user.getUserId(), storeId, user.getAddress(), user.getDetailAddress(), getNowTime(), false);
+        OrderDto orderDto = new OrderDto(user.getUserId(), storeDto.getStoreId(), user.getAddress(), user.getDetailAddress(), getNowTime(), false);
 
         session.removeAttribute("cart");
-        Order order = orderService.saveOrder(orderDto, storeId);
+        Order order = orderService.saveOrder(orderDto, storeDto.getStoreId());
         orderDetailService.saveOrderDetail(order, cart);
 
         return "redirect:/order/successOrder";
