@@ -50,6 +50,10 @@ public class UserService {
         return userListToDto(userRepository.findAll());
     }
 
+    public UserDto findById(Long userId) {
+        Optional<User> user = userRepository.findById(userId);
+        return user.orElseThrow().toDto();
+    }
 
     private ArrayList<UserDto> userListToDto(List<User> users) {
         ArrayList<UserDto> userDtos = new ArrayList<>();
