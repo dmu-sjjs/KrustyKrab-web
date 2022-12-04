@@ -1,16 +1,15 @@
-package js.krustykrab.domain;
+package js.krustykrab.domain.order;
 
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDto;
 import js.krustykrab.dto.order.OrderMapper;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-import static javax.persistence.FetchType.*;
+import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter

@@ -1,11 +1,14 @@
 package js.krustykrab.api;
 
+import js.krustykrab.domain.cart.Cart;
 import js.krustykrab.dto.UserDto;
+import js.krustykrab.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
@@ -14,6 +17,7 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 @RequestMapping("/order")
 public class OrderController {
+    private final MenuService menuService;
 
     @GetMapping("/{storeId}")
     public String toOrderPage(@PathVariable Long storeId, HttpSession session, Model model) {
@@ -25,11 +29,19 @@ public class OrderController {
         }
 
         return "redirect:/user/login";
-
     }
 
+//    @PostMapping("/{storeId}")
+//    public String order(@PathVariable Long storeId, HttpSession session) {
+//        Cart cart = (Cart) session.getAttribute("cart");
+//        session.removeAttribute("cart");
+//
+//
+//    }
+
     @GetMapping("/select")
-    public String toMenuSelectPage() {
+    public String toMenuSelectPage(Model model) {
+        model.addAttribute("menus", menuService.findAllMenu());
         return "/order/menuSelectPage";
     }
 }
