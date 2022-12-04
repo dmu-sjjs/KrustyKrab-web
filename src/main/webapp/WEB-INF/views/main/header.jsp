@@ -62,5 +62,5 @@
             </ul>
         </li>
     </div>
-    <button id="deliverybtn"><strong>딜리버리 주문</strong></button>
+    <button id="deliverybtn" onclick="location.href='/order';"><strong>딜리버리 주문</strong></button>
 </ul>

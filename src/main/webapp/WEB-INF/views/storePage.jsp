@@ -67,7 +67,8 @@
             y: ${s.storeLatitude},
             x: ${s.storeLongitude},
             place_name: '${s.storeName}',
-            place_tel: '${s.storeTelNumber}'
+            place_tel: '${s.storeTelNumber}',
+            place_id: '${s.storeId}'
         };
     displayMarker(place);
     </c:forEach>
@@ -87,7 +88,7 @@
             // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
             infowindow.setContent('<div style="padding:5px;font-size:12px;">'
                 + place.place_name +'<br>' + place.place_tel + '' +
-                '<br><button>주문하기</button>' +
+                '<br><button onclick="location.href=\'/order/' + place.place_id + '\'"'  + '>주문하기</button>' +
                 '</div>');
             infowindow.open(map, marker);
         });
