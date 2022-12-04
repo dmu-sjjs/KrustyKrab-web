@@ -18,6 +18,14 @@ public class OrderDto {
     private String orderDate;
     private Boolean isCompleted;
 
+    public OrderDto(Long userId, String address, String detailAddress, String orderDate, Boolean isCompleted) {
+        this.userId = userId;
+        this.address = address;
+        this.detailAddress = detailAddress;
+        this.orderDate = orderDate;
+        this.isCompleted = isCompleted;
+    }
+
     public Order toEntity(User user) {
         return Order.builder()
                 .user(user)

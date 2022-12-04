@@ -1,6 +1,7 @@
 package js.krustykrab.service;
 
 import js.krustykrab.dao.OrderRepository;
+import js.krustykrab.domain.cart.Cart;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDto;

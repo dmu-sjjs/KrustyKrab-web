@@ -15,7 +15,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderDetailService {
     private final OrderDetailRepository orderDetailRepository;
-    private final OrderService orderService;
     private final MenuService menuService;
 
 
