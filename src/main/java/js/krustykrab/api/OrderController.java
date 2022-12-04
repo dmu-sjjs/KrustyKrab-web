@@ -17,14 +17,15 @@ public class OrderController {
 
     @GetMapping("/{storeId}")
     public String toOrderPage(@PathVariable Long storeId, HttpSession session, Model model) {
-        try {
-            UserDto userDto = (UserDto) session.getAttribute("user");
-            model.addAttribute("storeId", storeId);
+        UserDto userDto = (UserDto) session.getAttribute("user");
 
+        if(userDto != null) {
+            model.addAttribute("storeId", storeId);
             return "/order/orderPage";
-        }catch (NullPointerException e) {
-            return "redirect:/user/login";
         }
+
+        return "redirect:/user/login";
+
     }
 
     @GetMapping("/select")
