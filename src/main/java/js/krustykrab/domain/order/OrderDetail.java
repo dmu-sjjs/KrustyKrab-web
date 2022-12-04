@@ -32,10 +32,14 @@ public class OrderDetail {
     @JoinColumn(name = "menuId")
     private Menu menu;
 
-    public OrderDetail(Order order, User user, Menu menu) {
+    @Column(name = "count")
+    private int count;
+
+    public OrderDetail(Order order, User user, Menu menu, int count) {
         this.order = order;
         this.user = user;
         this.menu = menu;
+        this.count = count;
     }
 
     public OrderDetailDto toDto() {
@@ -44,6 +48,7 @@ public class OrderDetail {
                 .orderId(order.getOrderId())
                 .userId(user.getUserId())
                 .menuId(menu.getMenuId())
+                .count(count)
                 .build();
     }
 

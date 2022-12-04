@@ -14,4 +14,5 @@ public class OrderDetailDto {
     private Long orderId;
     private Long userId;
     private Long menuId;
+    private int count;
 }
