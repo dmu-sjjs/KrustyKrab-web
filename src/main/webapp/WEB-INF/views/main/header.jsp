@@ -39,7 +39,7 @@
                 <li><a class="taga" href="/menu/BURGER">버거</a></li>
                 <li><a class="taga" href="/menu/SIDE">사이드</a></li>
                 <li><a class="taga" href="/menu/DRINK">음료</a></li>
-                <li><a class="taga" href="/menu/DESERT">디저트</a></li>
+                <li><a class="taga" href="/menu/DESSERT">디저트</a></li>
             </ul>
         </li>
 
@@ -62,5 +62,5 @@
             </ul>
         </li>
     </div>
-    <button id="deliverybtn" onclick="location.href='/order';"><strong>딜리버리 주문</strong></button>
+    <button id="deliverybtn" onclick="location.href='/store/all';"><strong>딜리버리 주문</strong></button>
 </ul>
