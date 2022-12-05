@@ -31,8 +31,6 @@
 <footer>
     <jsp:include page="../footer.jsp"/>
 </footer>
-<header>
-    <%@include file="../main/header.jsp"%>
-</header>
+
 </body>
 </html>
