@@ -3,6 +3,7 @@ package js.krustykrab.api;
 import js.krustykrab.domain.cart.Cart;
 import js.krustykrab.domain.cart.CartItem;
 import js.krustykrab.domain.order.Order;
+import js.krustykrab.dto.MenuDto;
 import js.krustykrab.dto.StoreDto;
 import js.krustykrab.dto.UserDto;
 import js.krustykrab.dto.order.OrderDto;
@@ -46,6 +47,11 @@ public class OrderController {
     @PostMapping("/{storeId}/addItem")
     public String addItem(CartItem cartItem, HttpSession session){
         Cart cart = (Cart)session.getAttribute("cart");
+        MenuDto menuDto = menuService.findMenu(cartItem.getMenuId());
+        cartItem.setMenuType(menuDto.getMenuType());
+        cartItem.setMenuName(menuDto.getMenuName());
+        cartItem.setPrice(menuDto.getPrice());
+
         cart.addItem(cartItem);
         session.setAttribute("cart", cart);
 
