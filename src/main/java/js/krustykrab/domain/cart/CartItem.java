@@ -10,5 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CartItem {
     private Long menuId;
+    private String menuName;
     private int count;
 }

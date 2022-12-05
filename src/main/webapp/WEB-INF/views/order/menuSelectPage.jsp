@@ -13,7 +13,7 @@
 <h1>Choose Your Menus!</h1>
 <form action="/order/${storeId}/addItem" method="post" >
     <input readonly type="hidden" id="menuId" name="menuId">
-    메뉴이름 <input required readonly type="text" id="menuName">
+    메뉴이름 <input required readonly type="text" id="menuName" name="menuName">
     개수 <input required type="number" id="count" name="count">
     <input type="submit" onclick="closeMenu()" value="장바구니 추가">
 </form>
