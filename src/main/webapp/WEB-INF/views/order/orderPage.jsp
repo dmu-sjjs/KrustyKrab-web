@@ -25,10 +25,14 @@
     <h1>주문</h1>
     <button onclick="selectMenuPage()" >메뉴 선택</button>
     <button>수제버거 선택</button>
+    <button onclick="menuList()" >주문목록</button>
 </main>
 <%--주문하기 버튼 폼태그 input<name=storeId>로 받아와야함 주문하기: submit--%>
 <div class="orderBtn">
-    <button>주문하기</button>
+    <form method="post" action="/order" >
+        <input type="hidden" name="storeId" value="${storeId}">
+        <input type="submit" value="주문하기">
+    </form>
 </div>
 <footer>
     <!-- footer -->
@@ -43,6 +47,9 @@
     function selectMenuPage() {
         window.open('/order/select/'+ storeNum , 'window_name', 'width=800, height=600, scrollbars=yes');
         console.log('메뉴창 열림');
+    }
+    function menuList() {
+        window.open('/order/'+ storeNum +'/checkMenu' , 'window_name', 'width=800, height=600, scrollbars=yes');
     }
 
 
