@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="js.krustykrab.domain.cart.Cart" %>
 <%@ page import="js.krustykrab.domain.cart.CartItem" %>
 <%@ page import="java.util.List" %>
@@ -51,6 +52,10 @@
     <tbody>
     <c:forEach var="i" items="${cartItems}">
         <tr>
+            <td>${i.menuName}</td>
+            <td>${i.menuName}</td>
+            <td>${i.menuName}</td>
+            <td>${i.menuName}</td>
             <td>${i.menuName}</td>
         </tr>
     </c:forEach>

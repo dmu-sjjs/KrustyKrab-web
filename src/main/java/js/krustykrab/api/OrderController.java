@@ -91,6 +91,7 @@ public class OrderController {
         session.removeAttribute("cart");
 
         model.addAttribute("cartItems", cart.getItems());
+        System.out.println("model에 값 저장");
         return "/order/orderSuccess";
     }
 
