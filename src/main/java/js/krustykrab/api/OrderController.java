@@ -73,6 +73,7 @@ public class OrderController {
     @GetMapping("/select/{storeId}")
     public String toMenuSelectPage(@PathVariable Long storeId, Model model) {
         model.addAttribute("menus", menuService.findAllMenu());
+        model.addAttribute("storeId", storeId);
         return "/order/menuSelectPage";
     }
 }
