@@ -44,10 +44,12 @@ public class OrderController {
     }
 
     @PostMapping("/{storeId}/addItem")
-    public void addItem(CartItem cartItem, HttpSession session){
+    public String addItem(CartItem cartItem, HttpSession session){
         Cart cart = (Cart)session.getAttribute("cart");
         cart.addItem(cartItem);
         session.setAttribute("cart", cart);
+
+        return "order/successAddItem";
     }
 
     @PostMapping
