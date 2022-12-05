@@ -74,13 +74,13 @@ public class OrderController {
     }
 
     @PostMapping
-    public String order(StoreDto storeDto, HttpSession session) {
+    public String order(Long storeId, HttpSession session) {
         Cart cart = (Cart) session.getAttribute("cart");
         UserDto user = (UserDto) session.getAttribute("user");
-        OrderDto orderDto = new OrderDto(user.getUserId(), storeDto.getStoreId(), user.getAddress(), user.getDetailAddress(), getNowTime(), false);
+        OrderDto orderDto = new OrderDto(user.getUserId(), storeId, user.getAddress(), user.getDetailAddress(), getNowTime(), false);
 
         session.removeAttribute("cart");
-        Order order = orderService.saveOrder(orderDto, storeDto.getStoreId());
+        Order order = orderService.saveOrder(orderDto, storeId);
         orderDetailService.saveOrderDetail(order, cart);
 
         return "redirect:/order/successOrder";
