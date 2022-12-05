@@ -37,8 +37,11 @@
 </footer>
 </body>
 <script>
+    let storeNum = window.location.href.split('/');
+    storeNum = storeNum[storeNum.length-1];
+
     function selectMenuPage() {
-        window.open('/order/select', 'window_name', 'width=800, height=600, scrollbars=yes');
+        window.open('/order/select/'+ storeNum , 'window_name', 'width=800, height=600, scrollbars=yes');
         console.log('메뉴창 열림');
     }
 

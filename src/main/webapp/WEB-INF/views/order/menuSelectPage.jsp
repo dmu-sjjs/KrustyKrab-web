@@ -11,10 +11,10 @@
     }
 </style>
 <h1>Choose Your Menus!</h1>
-<form>
-    <input readonly type="hidden" id="menuId">
-    메뉴이름 <input readonly type="text" id="menuName">
-    개수 <input type="number" id="count">
+<form action="/order/${storeId}/addItem" method="post" >
+    <input readonly type="hidden" id="menuId" name="menuId">
+    메뉴이름 <input required readonly type="text" id="menuName">
+    개수 <input required type="number" id="count" name="count">
     <input type="submit" onclick="closeMenu()" value="장바구니 추가">
 </form>
 <table class="menu_table">
@@ -31,15 +31,24 @@
 </table>
 
 <script>
+    const idInput = document.querySelector('#menuId');
+    const menuName = document.querySelector('#menuName');
+    const count = document.querySelector('#count');
     function chooseMenu(id, name){
-        const idInput = document.querySelector('#menuId');
-        const menuName = document.querySelector('#menuName');
         idInput.value= id;
         menuName.value = name;
     }
     function closeMenu(){
-        alert('장바구니에 추가되었습니다.');
+        if(menuName.value === ""){
+            alert('메뉴를 선택해주세요!');
+        }else {
+            if(count.value === ""){
+                alert('개수를 입력해주세요!');
+            }else{
+                alert('장바구니에 추가되었습니다!');
+            }
+        }
+
         console.log('메뉴창 닫힘');
-        window.close();
     }
 </script>
