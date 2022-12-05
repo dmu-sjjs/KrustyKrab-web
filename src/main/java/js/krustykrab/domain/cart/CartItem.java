@@ -11,5 +11,7 @@ import lombok.Setter;
 public class CartItem {
     private Long menuId;
     private String menuName;
+    private String menuType;
     private int count;
+    private int price;
 }
