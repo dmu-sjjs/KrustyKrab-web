@@ -1,6 +1,7 @@
 package js.krustykrab.api;
 
 import js.krustykrab.domain.cart.Cart;
+import js.krustykrab.domain.cart.CartItem;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.dto.StoreDto;
 import js.krustykrab.dto.UserDto;
@@ -34,11 +35,19 @@ public class OrderController {
         UserDto userDto = (UserDto) session.getAttribute("user");
 
         if (userDto != null) {
+            session.setAttribute("cart",new Cart());
             model.addAttribute("storeId", storeId);
             return "/order/orderPage";
         }
 
         return "redirect:/user/login";
+    }
+
+    @PostMapping("/{storeId}/addItem")
+    public void addItem(CartItem cartItem, HttpSession session){
+        Cart cart = (Cart)session.getAttribute("cart");
+        cart.addItem(cartItem);
+        session.setAttribute("cart", cart);
     }
 
     @PostMapping
