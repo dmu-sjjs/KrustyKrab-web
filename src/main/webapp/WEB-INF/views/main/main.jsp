@@ -29,8 +29,7 @@
         </button>
     </div>
     <div id="youtube">
-        <iframe width="960" height="400" src="https://www.youtube.com/embed/LcMFpQnyFTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <iframe width="960" height="400" src="https://www.youtube.com/embed/MlNndKvXa80" title="게살버거 1시간" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
 
     <div id="sns">
         <h1 id="snstitle">Krusty Krab</h1>
