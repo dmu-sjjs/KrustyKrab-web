@@ -79,12 +79,19 @@ public class OrderController {
         UserDto user = (UserDto) session.getAttribute("user");
         OrderDto orderDto = new OrderDto(user.getUserId(), storeId, user.getAddress(), user.getDetailAddress(), getNowTime(), false);
 
-        session.removeAttribute("cart");
         Order order = orderService.saveOrder(orderDto, storeId);
         orderDetailService.saveOrderDetail(order, cart);
 
-        return "redirect:/order/successOrder";
+        return "redirect:/order/orderSuccess";
+    }
 
+    @GetMapping("/orderSuccess")
+    public String toOrderSuccessPage(HttpSession session, Model model){
+        Cart cart = (Cart) session.getAttribute("cart");
+        session.removeAttribute("cart");
+
+        model.addAttribute("cart", cart);
+        return "/order/orderSuccess";
     }
 
     private String getNowTime() {
