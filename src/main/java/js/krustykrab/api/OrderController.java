@@ -90,7 +90,7 @@ public class OrderController {
         Cart cart = (Cart) session.getAttribute("cart");
         session.removeAttribute("cart");
 
-        model.addAttribute("cart", cart);
+        model.addAttribute("cartItems", cart.getItems());
         return "/order/orderSuccess";
     }
 
