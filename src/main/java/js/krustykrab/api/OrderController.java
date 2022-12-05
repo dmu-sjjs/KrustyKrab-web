@@ -55,10 +55,10 @@ public class OrderController {
         session.setAttribute("cart", cart);
 
         return "order/successAddItem";
-
     }
 
-    @GetMapping("checkMenu")
+
+    @GetMapping("/{storeId}/checkMenu")
     public String checkMenu() {
 
         return "order/checkMenu";
