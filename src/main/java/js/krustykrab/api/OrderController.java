@@ -36,7 +36,7 @@ public class OrderController {
         UserDto userDto = (UserDto) session.getAttribute("user");
 
         if (userDto != null) {
-            session.setAttribute("cart",new Cart());
+            session.setAttribute("cart", new Cart());
             model.addAttribute("storeId", storeId);
             return "/order/orderPage";
         }
@@ -45,21 +45,21 @@ public class OrderController {
     }
 
     @PostMapping("/{storeId}/addItem")
-    public String addItem(CartItem cartItem, HttpSession session){
-        Cart cart = (Cart)session.getAttribute("cart");
-        MenuDto menuDto = menuService.findMenu(cartItem.getMenuId());
-        cartItem.setMenuType(menuDto.getMenuType());
-        cartItem.setMenuName(menuDto.getMenuName());
-        cartItem.setPrice(menuDto.getPrice());
+    public String addItem(Long menuId, String menuName, int count, HttpSession session) {
+
+        Cart cart = (Cart) session.getAttribute("cart");
+        MenuDto menuDto = menuService.findMenu(menuId);
+        CartItem cartItem = new CartItem(menuId, menuName, menuDto.getMenuType(), count, menuDto.getPrice());
 
         cart.addItem(cartItem);
         session.setAttribute("cart", cart);
 
         return "order/successAddItem";
+
     }
 
     @GetMapping("checkMenu")
-    public String checkMenu(){
+    public String checkMenu() {
 
         return "order/checkMenu";
     }
@@ -67,7 +67,7 @@ public class OrderController {
     @PostMapping
     public String order(StoreDto storeDto, HttpSession session) {
         Cart cart = (Cart) session.getAttribute("cart");
-        UserDto user = (UserDto)session.getAttribute("user");
+        UserDto user = (UserDto) session.getAttribute("user");
         OrderDto orderDto = new OrderDto(user.getUserId(), storeDto.getStoreId(), user.getAddress(), user.getDetailAddress(), getNowTime(), false);
 
         session.removeAttribute("cart");
