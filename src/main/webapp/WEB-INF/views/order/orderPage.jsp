@@ -1,3 +1,5 @@
+<%@ page import="js.krustykrab.domain.cart.Cart"%>
+<%@ page import="js.krustykrab.domain.cart.CartItem"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -24,6 +26,7 @@
     <button onclick="selectMenuPage()" >메뉴 선택</button>
     <button>수제버거 선택</button>
 </main>
+<%--주문하기 버튼 폼태그 input<name=storeId>로 받아와야함 주문하기: submit--%>
 <div class="orderBtn">
     <button>주문하기</button>
 </div>
@@ -36,7 +39,10 @@
 <script>
     function selectMenuPage() {
         window.open('/order/select', 'window_name', 'width=800, height=600, scrollbars=yes');
+        console.log('메뉴창 열림');
     }
+
+
 </script>
 </html>
 
