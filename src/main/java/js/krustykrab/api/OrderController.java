@@ -70,8 +70,8 @@ public class OrderController {
         return sdf.format(c1.getTime());
     }
 
-    @GetMapping("/select")
-    public String toMenuSelectPage(Model model) {
+    @GetMapping("/select/{storeId}")
+    public String toMenuSelectPage(@PathVariable Long storeId, Model model) {
         model.addAttribute("menus", menuService.findAllMenu());
         return "/order/menuSelectPage";
     }
