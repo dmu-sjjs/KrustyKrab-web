@@ -52,6 +52,12 @@ public class OrderController {
         return "order/successAddItem";
     }
 
+    @GetMapping("checkMenu")
+    public String checkMenu(){
+
+        return "order/checkMenu";
+    }
+
     @PostMapping
     public String order(StoreDto storeDto, HttpSession session) {
         Cart cart = (Cart) session.getAttribute("cart");
