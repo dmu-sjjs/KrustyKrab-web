@@ -57,10 +57,19 @@ public class OrderController {
         return "order/successAddItem";
     }
 
+    @PostMapping("/{storeId}/removeItem")
+    public String removeItem(@PathVariable Long storeId, Long menuId, HttpSession session) {
+        Cart cart = (Cart) session.getAttribute("cart");
+        cart.removeItem(menuId);
+
+        session.setAttribute("cart", cart);
+
+        return "redirect:/order/"+storeId.toString()+"/checkMenu";
+    }
 
     @GetMapping("/{storeId}/checkMenu")
-    public String checkMenu() {
-
+    public String checkMenu(@PathVariable Long storeId, Model model) {
+        model.addAttribute("storeId", storeId);
         return "order/checkMenu";
     }
 
