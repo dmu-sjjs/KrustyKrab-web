@@ -2,6 +2,18 @@ body{
     margin: 0;
     padding: 0;
 }
+
+table{
+    background-color: #F1EBE7;
+}
+thead {
+    color: #F1EBE7;
+    background-color: #815B43;
+}
+tr {
+    border: 1px solid black;
+}
+
 #menuList{
     width: 700px;
     height: 600px;
@@ -17,4 +29,16 @@ body{
 #listTable {
     margin: auto;
     width: 650px;
+}
+
+.menu_del{
+    border: none;
+    border-radius: 15px;
+    color: #CAD4FB;
+    background-color: #C3291C;
+}
+
+.menu_del:hover {
+    color: #C3291C;
+    background-color: #CAD4FB;
 }

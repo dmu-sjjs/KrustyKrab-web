@@ -1,0 +1,40 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+table {
+    weight: 960px;
+    margin: 0 auto;
+}
+
+td{
+    font-weight: bold;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+thead{
+    color: white;
+    background-color: #815B43;
+}
+
+tbody{
+    background-color: #F1EBE7;
+}
+
+#goHome {
+    font-size: 40px;
+    border: none;
+    border-radius: 20px;
+    color:white;
+    background-color: black;
+}
+#goHome:hover {
+    color: black;
+    background-color: white;
+}
