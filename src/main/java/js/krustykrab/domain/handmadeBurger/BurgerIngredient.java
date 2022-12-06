@@ -1,8 +1,21 @@
 package js.krustykrab.domain.handmadeBurger;
 
+import static js.krustykrab.domain.handmadeBurger.IngredientType.*;
+
 public enum BurgerIngredient {
-    LETTUCE, ONION, TOMATO, // Vegetable
-    COW, CHICKEN, SHRIMP,   // Patty
-    PICKLE, GARLIC, EGGFRY, // Topping
-    BBQ, CHILI, RANCH   // Source
+    LETTUCE(VEGETABLE.name()), ONION(VEGETABLE.name()), TOMATO(VEGETABLE.name()), // Vegetable
+    COW(PATTY.name()), CHICKEN(PATTY.name()), SHRIMP(PATTY.name()),   // Patty
+    PICKLE(TOPPING.name()), GARLIC(TOPPING.name()), EGGFRY(TOPPING.name()), // Topping
+    BBQ(SOURCE.name()), CHILI(SOURCE.name()), RANCH(SOURCE.name())   // Source
+    ;
+
+    private String type;
+
+    BurgerIngredient(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 }
