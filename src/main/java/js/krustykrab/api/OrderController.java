@@ -22,6 +22,7 @@ import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -38,6 +39,7 @@ public class OrderController {
         if (userDto != null) {
             session.setAttribute("cart", new Cart());
             model.addAttribute("storeId", storeId);
+            model.addAttribute("menus", menuService.findAllMenu());
             return "/order/orderPage";
         }
 
