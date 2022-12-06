@@ -1,3 +1,14 @@
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+table{
+    background-color: #F1EBE7;
+}
+
 #selectPage {
     padding: 20px;
 }
@@ -38,4 +49,9 @@
 #addCart:hover{
     color: #CAD4FB;
     background-color: #C3291C;
+}
+
+.menuText{
+    font-size: 20px;
+    font-weight: bold;
 }

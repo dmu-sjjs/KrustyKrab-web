@@ -2,13 +2,14 @@
 <%@ page import="js.krustykrab.domain.cart.CartItem" %>
 <%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/resources/css/order/checkMenu.css">
 <div id="menuList">
-<h1>주문 목록</h1>
-<table border id="listTable" >
+<br><h1>주문 목록</h1><br>
+<table id="listTable" >
     <thead>
     <tr align="center">
-        <td>사진</td>
+        <td>주문목록</td>
         <td>메뉴아이디</td>
         <td>개수</td>
         <td>메뉴 이름</td>
@@ -32,7 +33,7 @@
                 <span>
                 <form method="post" action="/order/${storeId}/removeItem">
                     <input type="hidden" name="menuId" value="<%=item.getMenuId()%>">
-                    <input type="submit" value="메뉴삭제">
+                    <input class="menu_del" type="submit" value="메뉴삭제">
                 </form>
             </span>
         </td>
