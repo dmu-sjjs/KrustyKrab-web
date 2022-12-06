@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#menuList{
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menuList > h1 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#listTable {
+    margin: auto;
+    width: 650px;
+}

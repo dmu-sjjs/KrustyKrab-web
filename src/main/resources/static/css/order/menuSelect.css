@@ -1,0 +1,41 @@
+#selectPage {
+    padding: 20px;
+}
+
+.menu_table{
+    border: 1px solid black;
+}
+
+#addForm{
+    margin-bottom: 30px;
+}
+
+.menuList > a{
+    text-decoration: none;
+    color: black;
+}
+
+#menuName, #count {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 20px;
+}
+
+#selectTitle {
+    margin-bottom: 20px;
+}
+
+
+#addCart{
+    font-weight: bold;
+    margin-left: 20px;
+    border:none;
+    font-size: 25px;
+    color: #C3291C;
+    background-color: #CAD4FB;
+}
+#addCart:hover{
+    color: #CAD4FB;
+    background-color: #C3291C;
+}

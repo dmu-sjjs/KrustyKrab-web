@@ -8,55 +8,22 @@
     alert('주문되었습니다!');
 </script>
 
-<%--<table border>--%>
-<%--    <thead>--%>
-<%--    <tr align="center">--%>
-<%--        <td>사진</td>--%>
-<%--        <td>메뉴아이디</td>--%>
-<%--        <td>개수</td>--%>
-<%--        <td>메뉴 이름</td>--%>
-<%--        <td>총 가격</td>--%>
-<%--        <td>메뉴 삭제</td>--%>
-<%--    </tr>--%>
-<%--    </thead>--%>
-<%--    <%--%>
-
-<%--        for(CartItem item : items){--%>
-<%--    %>--%>
-<%--    <tr align="center">--%>
-<%--        <td><img width="150" height="150" src="/resources/img/<%=item.getMenuType()%>/<%=item.getMenuName()%>.png"></td>--%>
-<%--        <td><span><%=item.getMenuId()%></span></td>--%>
-<%--        <td><span><%=item.getCount()%></span></td>--%>
-<%--        <td><span><%=item.getMenuName()%></span></td>--%>
-<%--        <td><span><%=item.getPrice()*item.getCount()%></span></td>--%>
-<%--        <td>--%>
-<%--                <span>--%>
-<%--                <form method="post" action="/order/${storeId}/removeItem">--%>
-<%--                    <input type="hidden" name="menuId" value="<%=item.getMenuId()%>">--%>
-<%--                    <input type="submit" value="메뉴삭제">--%>
-<%--                </form>--%>
-<%--            </span>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-
-<%--    <%--%>
-<%--        }--%>
-<%--    %>--%>
-<%--</table>--%>
 <table border="1">
     <thead>
     <tr>
-        <th>menuName</th>
+        <th><h1>메뉴목록</h1></th>
+        <th>메뉴이름</th>
+        <th>주문수량</th>
+        <th>가격</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach var="i" items="${cartItems}">
         <tr>
+            <td><img width="150px" height="150px" src="/resources/img/${i.menuType}/${i.menuName}.png" ></td>
             <td>${i.menuName}</td>
-            <td>${i.menuName}</td>
-            <td>${i.menuName}</td>
-            <td>${i.menuName}</td>
-            <td>${i.menuName}</td>
+            <td>${i.count}</td>
+            <td>${i.price * i.count}</td>
         </tr>
     </c:forEach>
     </tbody>

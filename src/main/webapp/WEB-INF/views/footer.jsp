@@ -15,5 +15,5 @@
     <button id="servicecenterbtn">고객센터</button>
 </div>
 <div id="top">
-    <a href="#">top</a>
+    <a href="#">TOP</a>
 </div>

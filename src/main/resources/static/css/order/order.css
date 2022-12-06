@@ -4,15 +4,51 @@
     padding-bottom: 50px;
 }
 
-.orderBtn{
+.orderMain > span{
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.lastOrderBtn{
     position: fixed;
     right: 100px;
     bottom: 480px;
 }
-.orderBtn > button{
+.lastOrderBtn > form > input{
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
     border: none;
-    border-radius: 30px;
-    color: white;
+    color: #C3291C;
     font-size: 35px;
+    background-color: #CAD4FB;
+}
+.lastOrderBtn > form > input:hover {
+    color: #CAD4FB;
+    background-color: #C3291C;
+}
+
+.orderPageBtn{
+    margin-top: 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    border-radius: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.orderPageBtn:hover, #checkOrder:hover {
+    color: black;
+    background-color: white;
+}
+
+#checkOrder{
+    margin-top: 20px;
+    color: white;
+    border: none;
+    font-size: 15px;
     background-color: black;
 }

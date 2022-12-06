@@ -22,13 +22,14 @@
     <a href="#"><strong>딜리버리</strong></a>
 </div>
 <main class="orderMain">
-    <h1>주문</h1>
-    <button onclick="selectMenuPage()" >메뉴 선택</button>
-    <button>수제버거 선택</button>
-    <button onclick="menuList()" >주문목록</button>
+    <span>주문</span>
+    <button id="checkOrder" onclick="menuList()" >주문목록 확인</button><br>
+    <button class="orderPageBtn" onclick="selectMenuPage()" >메뉴 선택</button>
+    <button class="orderPageBtn" >수제버거 선택</button>
+
 </main>
 <%--주문하기 버튼 폼태그 input<name=storeId>로 받아와야함 주문하기: submit--%>
-<div class="orderBtn">
+<div class="lastOrderBtn">
     <form method="post" action="/order" >
         <input type="hidden" name="storeId" value="${storeId}">
         <input type="submit" value="주문하기">
@@ -49,7 +50,7 @@
         console.log('메뉴창 열림');
     }
     function menuList() {
-        window.open('/order/'+ storeNum +'/checkMenu' , 'window_name', 'width=800, height=600, scrollbars=yes');
+        window.open('/order/'+ storeNum +'/checkMenu' , 'window_name', 'width=700, height=600, scrollbars=yes');
     }
 
 

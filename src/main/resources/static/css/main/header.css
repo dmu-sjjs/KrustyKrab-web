@@ -93,8 +93,8 @@ header {
 #deliverybtn {
 	margin-left: 50px;
 	border-radius: 30px;
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: white;
 	border: none;
 	font-size: 30px;
 	padding: 5px 20px 5px 20px;

@@ -11,6 +11,14 @@
     <%@include file="main/csslink.jsp" %>
     <link rel="stylesheet" href="/resources/css/menu/store.css">
 </head>
+<style>
+    .locBtn{
+        border: none;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+    }
+</style>
 <body>
 <header>
     <jsp:include page="main/header.jsp"/>
@@ -88,7 +96,7 @@
             // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
             infowindow.setContent('<div style="padding:5px;font-size:12px;">'
                 + place.place_name +'<br>' + place.place_tel + '' +
-                '<br><button onclick="location.href=\'/order/' + place.place_id + '\'"'  + '>주문하기</button>' +
+                '<br><button class="locBtn" onclick="location.href=\'/order/' + place.place_id + '\'"'  + '>주문하기</button>' +
                 '</div>');
             infowindow.open(map, marker);
         });

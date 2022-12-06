@@ -2,8 +2,10 @@
 <%@ page import="js.krustykrab.domain.cart.CartItem" %>
 <%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
-<table border>
+<link rel="stylesheet" href="/resources/css/order/checkMenu.css">
+<div id="menuList">
+<h1>주문 목록</h1>
+<table border id="listTable" >
     <thead>
     <tr align="center">
         <td>사진</td>
@@ -25,7 +27,7 @@
         <td><span><%=item.getMenuId()%></span></td>
         <td><span><%=item.getCount()%></span></td>
         <td><span><%=item.getMenuName()%></span></td>
-        <td><span><%=item.getPrice()*item.getCount()%></span></td>
+        <td><span><%=item.getPrice()*item.getCount()%>원</span></td>
         <td>
                 <span>
                 <form method="post" action="/order/${storeId}/removeItem">
@@ -40,3 +42,4 @@
         }
     %>
 </table>
+</div>
