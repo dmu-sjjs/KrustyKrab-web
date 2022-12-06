@@ -4,6 +4,7 @@ import js.krustykrab.domain.menu.Menu;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.domain.user.User;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "HANDMADE_BURGER_ORDER_DETAIL")
 public class HandmadeBurgerOrderDetail {
 
@@ -19,17 +21,13 @@ public class HandmadeBurgerOrderDetail {
     @Column(name = "hbOrderInfoId")
     private Long hbOrderInfoId;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "orderId")
     private Order order;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "userId")
     private User user;
-
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "menuId")
-    private Menu menu;
 
     @Column(name = "vegetable1")
     @Enumerated(value = EnumType.STRING)
@@ -70,4 +68,6 @@ public class HandmadeBurgerOrderDetail {
     @Column(name = "source2")
     @Enumerated(value = EnumType.STRING)
     private BurgerIngredient source2;
+
+
 }
