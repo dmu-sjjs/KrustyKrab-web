@@ -98,7 +98,7 @@ public class OrderController {
     }
 
     private String getNowTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd-mm:ss");
         Calendar c1 = Calendar.getInstance();
         return sdf.format(c1.getTime());
     }
