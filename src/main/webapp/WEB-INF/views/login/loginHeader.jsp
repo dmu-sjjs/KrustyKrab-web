@@ -15,7 +15,7 @@
 %>
 <header class="loginTop">
     <div class="loginHeader">
-        <a href="#"><strong>로그인</strong></a> |
+        <a href="#"><strong>로그인</strong></a>
     </div>
     <div class="loginLogo">
         <a href="/"><img class="loginLogoImg" width="80px" height="80px" src="/resources/img/logo.png" /><h1 class="loginLogoText" ><strong>The Krusty Krab</strong></h1></a>
@@ -30,7 +30,7 @@
 %>
 <header class="loginTop">
     <div class="loginHeader">
-        <a href="#"><strong>로그아웃</strong></a> |
+        <a href="#"><strong>로그아웃</strong></a>
     </div>
     <div class="loginLogo">
         <a href="/"><img class="loginLogoImg" width="80px" height="80px" src="/resources/img/logo.png" /><h1 class="loginLogoText" ><strong>The Krusty Krab</strong></h1></a>

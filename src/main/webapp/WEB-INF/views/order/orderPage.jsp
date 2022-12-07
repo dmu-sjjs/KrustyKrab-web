@@ -25,7 +25,7 @@
     <button id="checkOrder" onclick="menuList()">주문목록 확인</button>
     <br>
     <button class="orderPageBtn" onclick="selectMenuPage()">메뉴 선택</button>
-    <button class="orderPageBtn">수제버거 선택</button>
+    <button class="orderPageBtn" onclick="goHandMadePage()" >수제버거 선택</button>
     <table class="menu_table">
         <tr>
             <c:forEach var="m" items="${menus}" varStatus="status">
@@ -64,6 +64,11 @@
 
     function menuList() {
         window.open('/order/' + storeNum + '/checkMenu', 'window_name', 'width=700, height=600, scrollbars=yes');
+    }
+
+    function goHandMadePage() {
+        window.open('/order/handmade/' + storeNum, 'window_name', 'width=800, height=600, scrollbars=yes');
+
     }
 
 

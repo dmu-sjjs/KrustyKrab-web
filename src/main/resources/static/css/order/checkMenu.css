@@ -3,13 +3,20 @@ body{
     padding: 0;
 }
 
+h1{
+   font-weight: bold;
+}
+
 table{
     background-color: #F1EBE7;
 }
+
 thead {
+    font-weight: bold;
     color: #F1EBE7;
     background-color: #815B43;
 }
+
 tr {
     border: 1px solid black;
 }

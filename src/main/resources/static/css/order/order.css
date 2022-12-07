@@ -12,8 +12,8 @@
 
 .lastOrderBtn{
     position: fixed;
-    right: 100px;
-    bottom: 480px;
+    right: 30px;
+    bottom: 200px;
 }
 .lastOrderBtn > form > input{
     font-weight: bold;

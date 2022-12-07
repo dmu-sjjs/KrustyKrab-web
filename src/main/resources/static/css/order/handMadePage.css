@@ -1,0 +1,22 @@
+body {
+    background-color: #F1EBE7;
+    text-align: center;
+}
+
+#handMadePage {
+    background-color: white;
+    width: 500px;
+    margin: 0 auto;
+}
+#vegDiv,#patDiv,#toppDiv {
+    text-align: left;
+}
+
+#handMadeComplete{
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+}
