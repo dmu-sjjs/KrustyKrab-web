@@ -26,10 +26,10 @@ public class HandmadeBurgerController {
     private final HandmadeBurgerDetailService handmadeService;
 
     @GetMapping("/{storeId}")
-    public String toHandmadePage(@PathVariable String storeId, Model model){
+    public String toHandmadePage(@PathVariable String storeId, Model model) {
         model.addAttribute("storeId", storeId);
 
-        return "handmadePage";
+        return "/order/handmadePage";
     }
 
     @PostMapping("/{storeId}")
