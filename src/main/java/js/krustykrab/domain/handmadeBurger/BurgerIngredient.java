@@ -3,16 +3,18 @@ package js.krustykrab.domain.handmadeBurger;
 import static js.krustykrab.domain.handmadeBurger.IngredientType.*;
 
 public enum BurgerIngredient {
-    LETTUCE(VEGETABLE.name()), ONION(VEGETABLE.name()), TOMATO(VEGETABLE.name()), // Vegetable
-    BEEF(PATTY.name()), CHICKEN(PATTY.name()), HAM(PATTY.name()),   // Patty
-    PICKLE(TOPPING.name()), GARLIC(TOPPING.name()), EGGFRY(TOPPING.name()), // Topping
-    BBQ(SOURCE.name()), CHILI(SOURCE.name()), RANCH(SOURCE.name()),   // Source
-    NONE(null); // None
+    LETTUCE(VEGETABLE.name(), 700), ONION(VEGETABLE.name(), 500), TOMATO(VEGETABLE.name(), 600), // Vegetable
+    BEEF(PATTY.name(), 2000), CHICKEN(PATTY.name(), 2300), HAM(PATTY.name(), 1800),   // Patty
+    PICKLE(TOPPING.name(), 300), GARLIC(TOPPING.name(), 200), EGGFRY(TOPPING.name(), 800), // Topping
+    BBQ(SOURCE.name(), 300), CHILI(SOURCE.name(), 300), RANCH(SOURCE.name(), 300),   // Source
+    NONE(null, 0); // None
 
 
     private String type;
+    private int price;
 
-    BurgerIngredient(String type) {
+    BurgerIngredient(String type, int price) {
+        this.price = price;
         this.type = type;
     }
 
