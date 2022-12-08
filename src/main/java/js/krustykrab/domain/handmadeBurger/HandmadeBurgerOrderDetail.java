@@ -1,6 +1,5 @@
 package js.krustykrab.domain.handmadeBurger;
 
-import js.krustykrab.domain.menu.Menu;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.domain.user.User;
 import lombok.AllArgsConstructor;

@@ -41,8 +41,7 @@ public class Menu {
     private int saleRate;
 
 
-
-    public MenuDto toDto(){
+    public MenuDto toDto() {
         return MenuDto.builder()
                 .menuId(menuId)
                 .menuName(menuName)

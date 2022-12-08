@@ -1,7 +1,6 @@
 package js.krustykrab.service;
 
 import com.opencsv.exceptions.CsvValidationException;
-import js.krustykrab.csv.menu.MenuCsvParser;
 import js.krustykrab.csv.store.StoreCsvParser;
 import js.krustykrab.dao.StoreRepository;
 import js.krustykrab.domain.Store;
@@ -19,15 +18,15 @@ import java.util.Optional;
 public class StoreService {
     private final StoreRepository storeRepository;
 
-
     public void addDefaultStore() throws CsvValidationException, IOException {
         StoreCsvParser.read(this);
     }
 
-    public StoreDto addStore(StoreDto storeDto){
+    public StoreDto addStore(StoreDto storeDto) {
         storeRepository.save(storeDto.toEntity());
         return storeDto;
     }
+
     public List<StoreDto> findAllStore() {
         List<Store> stores = storeRepository.findAll();
         return storeListToDto(stores);
@@ -38,9 +37,9 @@ public class StoreService {
         return storeListToDto(stores);
     }
 
-    public StoreDto findStoreById(Long id){
+    public StoreDto findStoreById(Long id) {
         Optional<Store> optionalStore = storeRepository.findById(id);
-        if(optionalStore.isPresent())
+        if (optionalStore.isPresent())
             return optionalStore.get().toDto();
         return null;
 

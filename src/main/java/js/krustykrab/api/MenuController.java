@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,14 +20,6 @@ import java.util.List;
 @RequestMapping("/menu")
 public class MenuController {
     private final MenuService menuService;
-
-//    @GetMapping("/{menuId}")
-//    public String showMenu(@PathVariable Long menuId, Model model, HttpServletRequest rq) throws UnsupportedEncodingException {
-//        MenuDto menu = menuService.findMenu(menuId);
-//        model.addAttribute("menu", menu);
-//
-//        return "showMenu"; // index : 임시값
-//    }
 
     @GetMapping("/add/default")
     public String defaultMenuSetting() throws CsvValidationException, IOException {
@@ -67,7 +57,7 @@ public class MenuController {
         model.addAttribute("menus", menus);
         model.addAttribute("type", menuType);
 
-        return "menu/"+menuType.toLowerCase();
+        return "menu/" + menuType.toLowerCase();
     }
 
 

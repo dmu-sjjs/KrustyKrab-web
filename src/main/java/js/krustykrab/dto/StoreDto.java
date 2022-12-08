@@ -18,7 +18,7 @@ public class StoreDto {
     private String storeLongitude;
     private String storeTelNumber;
 
-    public Store toEntity(){
+    public Store toEntity() {
         return Store.builder()
                 .storeName(storeName)
                 .storeLatitude(storeLatitude)
@@ -26,7 +26,8 @@ public class StoreDto {
                 .storeTelNumber(storeTelNumber)
                 .build();
     }
-    public Store toHasIdEntity(){
+
+    public Store toHasIdEntity() {
         return Store.builder()
                 .storeId(storeId)
                 .storeName(storeName)

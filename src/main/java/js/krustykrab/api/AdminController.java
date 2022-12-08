@@ -25,7 +25,7 @@ public class AdminController {
         try {
             UserDto user = (UserDto) session.getAttribute("user");
             adminService.checkAuthority(user);
-        } catch (Exception e){
+        } catch (Exception e) {
             return "authenticateFail";
         }
         ArrayList<UserDto> users = userService.findAllUser();
@@ -35,7 +35,7 @@ public class AdminController {
     }
 
     @GetMapping("authenticateFail")
-    public String authenticateFail(){
+    public String authenticateFail() {
         return "redirect:authenticateFail";
     }
 }

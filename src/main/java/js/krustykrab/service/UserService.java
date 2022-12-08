@@ -15,8 +15,6 @@ import java.util.Optional;
 public class UserService {
     private final UserRepository userRepository;
 
-    // 회원가입
-    // userDto 값 제대로 입력되었는지 검증은 프론트에서 처리
     public UserDto join(UserDto userDto) {
 
         Optional<User> userWithEnteredId = userRepository.findById(userDto.getId());

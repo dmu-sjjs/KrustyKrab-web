@@ -4,7 +4,6 @@ import js.krustykrab.domain.cart.Cart;
 import js.krustykrab.domain.cart.CartItem;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.dto.MenuDto;
-import js.krustykrab.dto.StoreDto;
 import js.krustykrab.dto.UserDto;
 import js.krustykrab.dto.order.OrderDto;
 import js.krustykrab.service.MenuService;
@@ -21,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -66,7 +63,7 @@ public class OrderController {
 
         session.setAttribute("cart", cart);
 
-        return "redirect:/order/"+storeId.toString()+"/checkMenu";
+        return "redirect:/order/" + storeId.toString() + "/checkMenu";
     }
 
     @GetMapping("/{storeId}/checkMenu")
@@ -88,7 +85,7 @@ public class OrderController {
     }
 
     @GetMapping("/orderSuccess")
-    public String toOrderSuccessPage(HttpSession session, Model model){
+    public String toOrderSuccessPage(HttpSession session, Model model) {
         Cart cart = (Cart) session.getAttribute("cart");
         session.removeAttribute("cart");
 

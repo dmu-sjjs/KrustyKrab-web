@@ -17,7 +17,6 @@ public class OrderDetailService {
     private final OrderDetailRepository orderDetailRepository;
     private final MenuService menuService;
 
-
     public void saveOrderDetail(Order order, Cart cart) {
         List<CartItem> items = cart.getItems();
 

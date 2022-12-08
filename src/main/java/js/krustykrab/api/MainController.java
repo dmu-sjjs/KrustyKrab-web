@@ -16,10 +16,12 @@ public class MainController {
     public String toEventPage() {
         return "index";
     }
+
     @GetMapping("/main/brand/story")
     public String toBrandStoryPage() {
         return "index";
     }
+
     @GetMapping("/main/brand/burger")
     public String toBrandBurgerPage() {
         return "index";

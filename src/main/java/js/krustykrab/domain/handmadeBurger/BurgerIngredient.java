@@ -27,6 +27,7 @@ public enum BurgerIngredient {
     public IngredientType getType() {
         return type;
     }
+
     public Integer getPrice() {
         return price;
     }
@@ -38,7 +39,6 @@ public enum BurgerIngredient {
     public static List<BurgerIngredient> getAllIngredients() {
         return new ArrayList<>(Arrays.asList(values()));
     }
-
 
 
     public static List<BurgerIngredient> getVegetables() {

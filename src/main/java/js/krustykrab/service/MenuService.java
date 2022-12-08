@@ -23,7 +23,7 @@ public class MenuService {
         MenuCsvParser.read(this);
     }
 
-    public MenuDto findMenu(Long menuId){
+    public MenuDto findMenu(Long menuId) {
         return menuRepository
                 .findByMenuId(menuId).orElseThrow(() -> new IllegalArgumentException("일치하는 menuId가 없습니다."))
                 .toDto();
@@ -43,7 +43,7 @@ public class MenuService {
         return menuListToDto(menus);
     }
 
-    public ArrayList<MenuDto> findSaleMenus(){
+    public ArrayList<MenuDto> findSaleMenus() {
         List<Menu> menus = menuRepository.findByIsSale(true);
         return menuListToDto(menus);
     }

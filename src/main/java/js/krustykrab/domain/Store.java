@@ -34,7 +34,7 @@ public class Store {
     private String storeTelNumber;
 
 
-    public StoreDto toDto(){
+    public StoreDto toDto() {
         return StoreDto.builder()
                 .storeId(storeId)
                 .storeName(storeName)

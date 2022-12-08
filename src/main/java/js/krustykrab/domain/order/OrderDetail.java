@@ -4,12 +4,9 @@ import js.krustykrab.domain.menu.Menu;
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.order.OrderDetailDto;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
-import static javax.persistence.FetchType.LAZY;
 
 
 @Entity

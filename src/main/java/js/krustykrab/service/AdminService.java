@@ -11,9 +11,9 @@ import static js.krustykrab.domain.user.Authority.ADMIN;
 public class AdminService {
     private final UserService userService;
 
-    public Boolean checkAuthority(UserDto userDto){
+    public Boolean checkAuthority(UserDto userDto) {
         String authority = userDto.getAuthority();
-        if(authority.equals(ADMIN.name())){
+        if (authority.equals(ADMIN.name())) {
             return true;
         }
         return false;

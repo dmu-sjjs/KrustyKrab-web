@@ -28,8 +28,8 @@ public class UserController {
     @PostMapping("/login")
     public String login(UserDto userDto, String saveIdPw, HttpSession session, Model model) {
         userDto = userService.login(userDto);
-        if(userDto != null){
-            session.setAttribute("user",userDto);
+        if (userDto != null) {
+            session.setAttribute("user", userDto);
             checkSaveIdPw(userDto, saveIdPw, session);
             return "redirect:/";
         }
@@ -38,7 +38,7 @@ public class UserController {
     }
 
     private void checkSaveIdPw(UserDto userDto, String saveIdPw, HttpSession session) {
-        if(saveIdPw != null) {
+        if (saveIdPw != null) {
             session.setAttribute("id", userDto.getId());
             session.setAttribute("pw", userDto.getPw());
             session.setAttribute("saveIdPw", "checked");
@@ -50,7 +50,7 @@ public class UserController {
     }
 
     @GetMapping("/logout")
-    public String logout(HttpSession session){
+    public String logout(HttpSession session) {
         session.removeAttribute("user");
         return "redirect:/";
     }
@@ -82,7 +82,7 @@ public class UserController {
 
         rq.setAttribute("isDuplicate", false);
         rq.setAttribute("id", userDto.getId());
-        if(isDuplicate){
+        if (isDuplicate) {
             rq.setAttribute("isDuplicate", true);
         }
 
