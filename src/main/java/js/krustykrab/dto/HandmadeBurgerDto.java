@@ -6,6 +6,11 @@ import js.krustykrab.domain.order.Order;
 import js.krustykrab.domain.user.User;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static js.krustykrab.domain.handmadeBurger.BurgerIngredient.NONE;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -50,4 +55,41 @@ public class HandmadeBurgerDto {
                 .source2(BurgerIngredient.valueOf(source2))
                 .build();
     }
+
+    public List<BurgerIngredient> getBurgerIngredients() {
+        List<BurgerIngredient> ingredients = getPresentIngredient();
+
+        return ingredients;
+    }
+
+    private List<BurgerIngredient> getPresentIngredient() {
+        List<BurgerIngredient> ingredients = new ArrayList<>();
+        ingredients.add(getIngredient(vegetable1));
+        ingredients.add(getIngredient(vegetable2));
+        ingredients.add(getIngredient(vegetable3));
+        ingredients.add(getIngredient(patty1));
+        ingredients.add(getIngredient(patty2));
+        ingredients.add(getIngredient(topping1));
+        ingredients.add(getIngredient(topping2));
+        ingredients.add(getIngredient(topping3));
+        ingredients.add(getIngredient(source1));
+        ingredients.add(getIngredient(source2));
+
+        return removeNoneIngredient(ingredients);
+    }
+
+    private BurgerIngredient getIngredient(String ingredient) {
+        return BurgerIngredient.valueOf(ingredient);
+    }
+
+    private List<BurgerIngredient> removeNoneIngredient(List<BurgerIngredient> ingredients) {
+        ingredients.forEach(i -> {
+            if(i.equals(NONE)){
+                ingredients.remove(i);
+            }
+        });
+
+        return ingredients;
+    }
+
 }

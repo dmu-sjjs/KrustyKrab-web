@@ -1,5 +1,6 @@
 package js.krustykrab.api;
 
+import js.krustykrab.domain.handmadeBurger.BurgerIngredient;
 import js.krustykrab.domain.order.Order;
 import js.krustykrab.dto.HandmadeBurgerDto;
 import js.krustykrab.dto.UserDto;
@@ -16,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -33,13 +36,13 @@ public class HandmadeBurgerController {
     }
 
     @PostMapping("/{storeId}")
-    public String orderHandmadeBurger(@PathVariable Long storeId, HandmadeBurgerDto handmadeBurgerDto, HttpSession session) {
+    public String orderHandmadeBurger(@PathVariable Long storeId, HandmadeBurgerDto handmadeBurgerDto, HttpSession session, Model model) {
         UserDto user = (UserDto) session.getAttribute("user");
         OrderDto orderDto = new OrderDto(user.getUserId(), storeId, user.getAddress(), user.getDetailAddress(), getNowTime(), false);
 
         Order order = orderService.saveOrder(orderDto, storeId);
         handmadeService.saveHandmadeOrderDetail(handmadeBurgerDto, order);
-        session.setAttribute("handmadeIngredient", handmadeBurgerDto);
+        model.addAttribute("handmadeIngredient", handmadeBurgerDto.getBurgerIngredients());
 
         return "redirect:/order/handmade/orderSuccess";
     }
