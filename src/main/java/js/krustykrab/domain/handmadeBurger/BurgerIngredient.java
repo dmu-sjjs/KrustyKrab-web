@@ -1,5 +1,10 @@
 package js.krustykrab.domain.handmadeBurger;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static js.krustykrab.domain.handmadeBurger.IngredientType.*;
 
 public enum BurgerIngredient {
@@ -23,5 +28,33 @@ public enum BurgerIngredient {
     }
     public Integer getPrice() {
         return price;
+    }
+
+    public static List<BurgerIngredient> getAllIngredients() {
+        return Arrays.stream(values()).collect(Collectors.toList());
+    }
+
+    public static List<BurgerIngredient> getVegetables() {
+        return Arrays.stream(values())
+                .filter(ingredient -> ingredient.type.equals(VEGETABLE))
+                .collect(Collectors.toList());
+    }
+
+    public static List<BurgerIngredient> getPattys() {
+        return Arrays.stream(values())
+                .filter(ingredient -> ingredient.type.equals(PATTY))
+                .collect(Collectors.toList());
+    }
+
+    public static List<BurgerIngredient> getToppings() {
+        return Arrays.stream(values())
+                .filter(ingredient -> ingredient.type.equals(TOPPING))
+                .collect(Collectors.toList());
+    }
+
+    public static List<BurgerIngredient> getSources() {
+        return Arrays.stream(values())
+                .filter(ingredient -> ingredient.type.equals(SOURCE))
+                .collect(Collectors.toList());
     }
 }
