@@ -8,22 +8,21 @@ import java.util.stream.Collectors;
 import static js.krustykrab.domain.handmadeBurger.IngredientType.*;
 
 public enum BurgerIngredient {
-    LETTUCE(VEGETABLE.name(), 700), ONION(VEGETABLE.name(), 500), TOMATO(VEGETABLE.name(), 600), // Vegetable
-    BEEF(PATTY.name(), 2000), CHICKEN(PATTY.name(), 2300), HAM(PATTY.name(), 1800),   // Patty
-    PICKLE(TOPPING.name(), 300), GARLIC(TOPPING.name(), 200), EGGFRY(TOPPING.name(), 800), // Topping
-    BBQ(SOURCE.name(), 300), CHILI(SOURCE.name(), 300), RANCH(SOURCE.name(), 300),   // Source
+    LETTUCE(VEGETABLE, 700), ONION(VEGETABLE, 500), TOMATO(VEGETABLE, 600), // Vegetable
+    BEEF(PATTY, 2000), CHICKEN(PATTY, 2300), HAM(PATTY, 1800),   // Patty
+    PICKLE(TOPPING, 300), GARLIC(TOPPING, 200), EGGFRY(TOPPING, 800), // Topping
+    BBQ(SOURCE, 300), CHILI(SOURCE, 300), RANCH(SOURCE, 300),   // Source
     NONE(null, 0); // None
 
-
-    private String type;
+    private IngredientType type;
     private int price;
 
-    BurgerIngredient(String type, int price) {
+    BurgerIngredient(IngredientType type, int price) {
         this.price = price;
         this.type = type;
     }
 
-    public String getType() {
+    public IngredientType getType() {
         return type;
     }
     public Integer getPrice() {
@@ -31,30 +30,40 @@ public enum BurgerIngredient {
     }
 
     public static List<BurgerIngredient> getAllIngredients() {
-        return Arrays.stream(values()).collect(Collectors.toList());
+        return new ArrayList<>(Arrays.asList(values()));
     }
 
+
+
     public static List<BurgerIngredient> getVegetables() {
-        return Arrays.stream(values())
-                .filter(ingredient -> ingredient.type.equals(VEGETABLE))
+        List<BurgerIngredient> vegetables = getAllIngredients().stream()
+                .filter(ingredient -> ingredient.type == VEGETABLE)
                 .collect(Collectors.toList());
+
+        return vegetables;
     }
 
     public static List<BurgerIngredient> getPattys() {
-        return Arrays.stream(values())
-                .filter(ingredient -> ingredient.type.equals(PATTY))
+        List<BurgerIngredient> pattys = getAllIngredients().stream()
+                .filter(ingredient -> ingredient.type == PATTY)
                 .collect(Collectors.toList());
+
+        return pattys;
     }
 
     public static List<BurgerIngredient> getToppings() {
-        return Arrays.stream(values())
-                .filter(ingredient -> ingredient.type.equals(TOPPING))
+        List<BurgerIngredient> toppings = getAllIngredients().stream()
+                .filter(ingredient -> ingredient.type == TOPPING)
                 .collect(Collectors.toList());
+
+        return toppings;
     }
 
     public static List<BurgerIngredient> getSources() {
-        return Arrays.stream(values())
-                .filter(ingredient -> ingredient.type.equals(SOURCE))
+        List<BurgerIngredient> sources = getAllIngredients().stream()
+                .filter(ingredient -> ingredient.type == SOURCE)
                 .collect(Collectors.toList());
+
+        return sources;
     }
 }
