@@ -8,18 +8,20 @@ import java.util.stream.Collectors;
 import static js.krustykrab.domain.handmadeBurger.IngredientType.*;
 
 public enum BurgerIngredient {
-    LETTUCE(VEGETABLE, 700), ONION(VEGETABLE, 500), TOMATO(VEGETABLE, 600), // Vegetable
-    BEEF(PATTY, 2000), CHICKEN(PATTY, 2300), HAM(PATTY, 1800),   // Patty
-    PICKLE(TOPPING, 300), GARLIC(TOPPING, 200), EGGFRY(TOPPING, 800), // Topping
-    BBQ(SOURCE, 300), CHILI(SOURCE, 300), RANCH(SOURCE, 300),   // Source
-    NONE(null, 0); // None
+    LETTUCE(VEGETABLE, 700, "양상추"), ONION(VEGETABLE, 500, "양파"), TOMATO(VEGETABLE, 600, "토마토"), // Vegetable
+    BEEF(PATTY, 2000, "소고기 패티"), CHICKEN(PATTY, 2300, "치킨 패티"), HAM(PATTY, 1800, "햄 패티"),   // Patty
+    PICKLE(TOPPING, 300, "피클"), GARLIC(TOPPING, 200, "구운 마늘"), EGGFRY(TOPPING, 800, "계란후라이"), // Topping
+    BBQ(SOURCE, 300, "BBQ 소스"), CHILI(SOURCE, 300, "칠리 소스"), RANCH(SOURCE, 300, "렌치 소스"),   // Source
+    NONE(null, 0, ""); // None
 
     private IngredientType type;
     private int price;
+    private String name;
 
-    BurgerIngredient(IngredientType type, int price) {
+    BurgerIngredient(IngredientType type, int price, String name) {
         this.price = price;
         this.type = type;
+        this.name = name;
     }
 
     public IngredientType getType() {
@@ -27,6 +29,10 @@ public enum BurgerIngredient {
     }
     public Integer getPrice() {
         return price;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public static List<BurgerIngredient> getAllIngredients() {
