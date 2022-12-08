@@ -26,14 +26,27 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login(UserDto userDto, HttpSession session, Model model) {
+    public String login(UserDto userDto, String saveIdPw, HttpSession session, Model model) {
         userDto = userService.login(userDto);
         if(userDto != null){
             session.setAttribute("user",userDto);
+            checkSaveIdPw(userDto, saveIdPw, session);
             return "redirect:/";
         }
         model.addAttribute("isLoginSuccess", false);
         return "redirect:loginFail";
+    }
+
+    private void checkSaveIdPw(UserDto userDto, String saveIdPw, HttpSession session) {
+        if(saveIdPw != null) {
+            session.setAttribute("id", userDto.getId());
+            session.setAttribute("pw", userDto.getPw());
+            session.setAttribute("saveIdPw", "checked");
+        } else {
+            session.setAttribute("id", "");
+            session.setAttribute("pw", "");
+            session.setAttribute("saveIdPw", "");
+        }
     }
 
     @GetMapping("/logout")
