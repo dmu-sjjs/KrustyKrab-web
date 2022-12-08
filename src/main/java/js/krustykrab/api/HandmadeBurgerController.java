@@ -31,6 +31,10 @@ public class HandmadeBurgerController {
     @GetMapping("/{storeId}")
     public String toHandmadePage(@PathVariable String storeId, Model model) {
         model.addAttribute("storeId", storeId);
+        model.addAttribute("vegetables", BurgerIngredient.getVegetables());
+        model.addAttribute("pattys", BurgerIngredient.getPattys());
+        model.addAttribute("toppings", BurgerIngredient.getToppings());
+        model.addAttribute("sources", BurgerIngredient.getSources());
 
         return "/order/handmadePage";
     }
