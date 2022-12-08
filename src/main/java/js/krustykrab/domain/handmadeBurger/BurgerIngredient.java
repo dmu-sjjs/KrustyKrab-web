@@ -21,5 +21,7 @@ public enum BurgerIngredient {
     public String getType() {
         return type;
     }
-
+    public Integer getPrice() {
+        return price;
+    }
 }
