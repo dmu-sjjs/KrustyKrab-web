@@ -15,7 +15,7 @@
         </p>
     </div>
     <div>
-        <form method="post" action="/order/handmade/orderSuccess">
+        <form method="post" action="/order/handmade/${storeId}">
             <div id="vegDiv">
                 <label for="vegetable1">야채선택1</label>
                 <select id="vegetable1" name="vegetable1">

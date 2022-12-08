@@ -46,16 +46,19 @@ public class HandmadeBurgerController {
 
         Order order = orderService.saveOrder(orderDto, storeId);
         handmadeService.saveHandmadeOrderDetail(handmadeBurgerDto, order);
-        model.addAttribute("handmadeIngredient", handmadeBurgerDto.getBurgerIngredients());
+        session.setAttribute("ingredients", handmadeBurgerDto.getBurgerIngredients());
 
         return "redirect:/order/handmade/orderSuccess";
     }
 
-    @PostMapping("orderSuccess")
-    public String orderSuccess(HandmadeBurgerDto handmadeBurgerDto,Model model) {
-        model.addAttribute("ingredients", handmadeBurgerDto.getBurgerIngredients());
+    @GetMapping("orderSuccess")
+    public String toHandmadeOrderSuccessPage(HttpSession session, Model model) {
+        List<BurgerIngredient> ingredients = (List<BurgerIngredient>) session.getAttribute("ingredients");
+        session.removeAttribute("ingredients");
 
-        return "/order/handmadeOrderSuccess";
+        model.addAttribute("ingredients", ingredients);
+
+        return "order/handmadeOrderSuccess";
     }
 
     private String getNowTime() {
