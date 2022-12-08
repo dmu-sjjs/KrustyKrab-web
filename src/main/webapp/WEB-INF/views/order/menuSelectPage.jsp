@@ -23,7 +23,7 @@
             <td align="center" class="menuList" id="${m.menuId}"><a href="javascript:void(0)"
                                                                     onclick="chooseMenu(${m.menuId}, '${m.menuName}')">
                 <img width="150" height="150" src="/resources/img/${m.menuType}/${m.menuName}.png">
-                <br>${m.menuName} <br>${m.price}<br>${m.menuDescription}</a></td>
+                <br>${m.menuName} <br>${m.price} ￦<br>${m.menuDescription}</a></td>
             </c:forEach>
         </tr>
     </table>

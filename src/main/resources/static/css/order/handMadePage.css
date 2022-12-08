@@ -1,10 +1,25 @@
 body {
-    background-color: #F1EBE7;
+    background-color: white;
     text-align: center;
+    margin: 0;
+}
+
+strong{
+    font-weight: bold;
+}
+
+div{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+table{
+    width: 500px;
 }
 
 #handMadePage {
-    background-color: white;
+    background-color: #F1EBE7;
     width: 600px;
     margin: 0 auto;
 }
@@ -18,5 +33,16 @@ body {
     font-size: 25px;
     background-color: black;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
+
+.h_table {
+    text-align: center;
+    margin: 0 auto;
+}
+
+td {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+

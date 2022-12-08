@@ -28,7 +28,7 @@
         <td><span><%=item.getMenuId()%></span></td>
         <td><span><%=item.getCount()%></span></td>
         <td><span><%=item.getMenuName()%></span></td>
-        <td><span><%=item.getPrice()*item.getCount()%>원</span></td>
+        <td><span><%=item.getPrice()*item.getCount()%> ￦</span></td>
         <td>
                 <span>
                 <form method="post" action="/order/${storeId}/removeItem">
