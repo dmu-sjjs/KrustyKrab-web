@@ -44,7 +44,7 @@
                     <c:forEach var="v" items="${vegetables}">
                         <td>
                             <img width="100" height="100" src="/resources/img/handmade/${v.name()}.png"><br>
-                            <strong>${v.name()}</strong><br>
+                            <strong>${v.getName()}</strong><br>
                             가격 : ${v.getPrice()} ￦
                         </td>
                     </c:forEach>
@@ -73,7 +73,7 @@
                     <c:forEach var="p" items="${pattys}">
                         <td>
                             <img width="100" height="100" src="/resources/img/handmade/${p.name()}.png"><br>
-                            <strong>${p.name()}</strong><br>
+                            <strong>${p.getName()}</strong><br>
                             가격 : ${p.getPrice()} ￦
                         </td>
                     </c:forEach>
@@ -109,7 +109,7 @@
                     <c:forEach var="t" items="${toppings}">
                             <td>
                                 <img width="100" height="100" src="/resources/img/handmade/${t.name()}.png"><br>
-                                <strong>${t.name()}</strong><br>
+                                <strong>${t.getName()}</strong><br>
                                 가격 : ${t.getPrice()} ￦
                             </td>
                     </c:forEach>
@@ -137,7 +137,7 @@
                 <c:forEach var="s" items="${sources}">
                         <td>
                             <img width="100" height="100" src="/resources/img/handmade/${s.name()}.png"><br>
-                            <strong>${s.name()}</strong><br>
+                            <strong>${s.getName()}</strong><br>
                             가격 : ${s.getPrice()} ￦
                         </td>
                 </c:forEach>
