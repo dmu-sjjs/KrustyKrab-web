@@ -5,10 +5,10 @@ body {
 
 #handMadePage {
     background-color: white;
-    width: 500px;
+    width: 600px;
     margin: 0 auto;
 }
-#vegDiv,#patDiv,#toppDiv {
+#vegDiv,#patDiv,#toppDiv,#sourceDiv {
     text-align: left;
 }
 
