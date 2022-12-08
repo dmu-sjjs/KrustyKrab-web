@@ -1,5 +1,8 @@
+<%@ page import="js.krustykrab.domain.handmadeBurger.BurgerIngredient" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/resources/css/order/handMadePage.css">
 <div id="handMadePage">
@@ -32,12 +35,13 @@
                     <option value="LETTUCE">상추</option>
                 </select>
                 <br>
-                <table>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                </table>
+                <c:forEach var="v" items="${vegetables}">
+                    <tr>
+                        <td>이름 : ${v.name()}</td>
+                        <td>가격 : ${v.getPrice()}</td>
+                        <td><img src="/resources/img/handmade/${v.name()}.png"></td>
+                    </tr>
+                </c:forEach>
             </div>
             <br><br>
             <div id="patDiv">
@@ -56,12 +60,13 @@
                     <option value="BEEF">소고기</option>
                 </select>
                 <br>
-                <table>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                </table>
+                <c:forEach var="p" items="${pattys}">
+                    <tr>
+                        <td>이름 : ${p.name()}</td>
+                        <td>가격 : ${p.getPrice()}</td>
+                        <td><img src="/resources/img/handmade/${p.name()}.png"></td>
+                    </tr>
+                </c:forEach>
             </div>
             <br><br>
             <div id="toppDiv">
@@ -87,12 +92,13 @@
                     <option value="EGGFRY">계란후라이</option>
                 </select>
                 <br>
-                <table>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                </table>
+                <c:forEach var="t" items="${toppings}">
+                    <tr>
+                        <td>이름 : ${t.name()}</td>
+                        <td>가격 : ${t.getPrice()}</td>
+                        <td><img src="/resources/img/handmade/${t.name()}.png"></td>
+                    </tr>
+                </c:forEach>
             </div>
             <br><br>
             <div id="sourceDiv">
@@ -111,12 +117,13 @@
                     <option value="RANCH">랜치 소스</option>
                 </select>
                 <br>
-                <table>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                    <tr><img src="/resources/img/handmade/TOMATO.png"></tr>
-                </table>
+                <c:forEach var="s" items="${sources}">
+                    <tr>
+                        <td>이름 : ${s.name()}</td>
+                        <td>가격 : ${s.getPrice()}</td>
+                        <td><img src="/resources/img/handmade/${s.name()}.png"></td>
+                    </tr>
+                </c:forEach>
             </div>
             <br><br>
             <input type="submit" id="handMadeComplete" value="선택완료">
