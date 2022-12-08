@@ -51,11 +51,9 @@ public class HandmadeBurgerController {
         return "redirect:/order/handmade/orderSuccess";
     }
 
-    @GetMapping("orderSuccess")
-    public String orderSuccess(HttpSession session, Model model) {
-        HandmadeBurgerDto handmadeIngredient = (HandmadeBurgerDto) session.getAttribute("handmadeIngredient");
-        session.removeAttribute("handmadeIngredient");
-        model.addAttribute("handmadeIngredient", handmadeIngredient);
+    @PostMapping("orderSuccess")
+    public String orderSuccess(HandmadeBurgerDto handmadeBurgerDto,Model model) {
+        model.addAttribute("ingredients", handmadeBurgerDto.getBurgerIngredients());
 
         return "/order/handmadeOrderSuccess";
     }
