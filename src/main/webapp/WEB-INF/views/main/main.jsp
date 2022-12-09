@@ -34,7 +34,7 @@
     <div id="sns">
         <h1 id="snstitle">Krusty Krab</h1>
         <ul class="snslist">
-            <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/youtube.jpg" /></a> Youtube</li>
+            <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/youtube.png" /></a> Youtube</li>
             <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/instagram.png" /></a> Instagram</li>
             <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/facebook.jpg" /></a> Facebook</li>
         </ul>

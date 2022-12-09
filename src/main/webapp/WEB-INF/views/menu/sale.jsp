@@ -23,7 +23,7 @@
         </tr><tr>
         </c:if>
         <td><img width="150" height="150" src="/resources/img/${m.menuType}/${m.menuName}.png" >
-            <br> ${m.menuName} <br>${m.price}<br>${m.menuDescription}<br>${m.saleRate}%OFF</td>
+            <br><strong>${m.menuName}</strong><br>${m.price}<br>${m.menuDescription}<br>${m.saleRate}%OFF</td>
         </c:forEach>
     </tr>
     </table>
