@@ -33,7 +33,7 @@
                 <span>
                 <form method="post" action="/order/${storeId}/removeItem">
                     <input type="hidden" name="menuId" value="<%=item.getMenuId()%>">
-                    <input class="menu_del" type="submit" value="메뉴삭제">
+                    <input class="menu_del" onclick="deleteMenu()" type="submit" value="메뉴삭제">
                 </form>
             </span>
         </td>
@@ -44,3 +44,8 @@
     %>
 </table>
 </div>
+<script>
+    function deleteMenu() {
+        alert('선택하신 메뉴가 삭제되었습니다');
+    }
+</script>
