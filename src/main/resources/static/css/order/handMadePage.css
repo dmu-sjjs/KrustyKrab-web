@@ -4,6 +4,13 @@ body {
     margin: 0;
 }
 
+label{
+    background-color: #C3291C;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 strong{
     font-weight: bold;
 }

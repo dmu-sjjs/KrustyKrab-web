@@ -35,7 +35,7 @@
             </c:if>
             <td align="center" class="menuList" id="${m.menuId}">
                 <img width="150" height="150" src="/resources/img/${m.menuType}/${m.menuName}.png">
-                <br>${m.menuName} <br>${m.price} ￦<br>${m.menuDescription}</td>
+                <br><strong>${m.menuName}</strong><br>${m.price} ￦<br>${m.menuDescription}</td>
             </c:forEach>
         </tr>
     </table>

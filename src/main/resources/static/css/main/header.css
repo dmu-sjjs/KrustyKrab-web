@@ -44,6 +44,10 @@ header {
 	text-decoration: none;
 }
 
+a:hover {
+	color: #C3291C;
+}
+
 #menu {
 	margin: 0;
 	padding: 0;

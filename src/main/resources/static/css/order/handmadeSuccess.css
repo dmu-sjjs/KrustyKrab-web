@@ -1,0 +1,49 @@
+body {
+    background-color: #F1EBE7;
+}
+
+strong {
+    color: black;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+div{
+    text-align: center;
+}
+
+img{
+    margin: 0 auto;
+}
+#handmadeSuccessPage {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#handmadeTitle{
+    text-align: left;
+    margin-left: 20px;
+}
+
+#handmadeText {
+    color: #C3291C;
+}
+
+#exitPageBtn {
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-size: 35px;
+    background-color: #C3291C;
+    margin-bottom: 20px;
+}
+#exitPageBtn:hover {
+    border: 3px solid gray;
+    color: gray;
+    background-color: #C3291C;
+}

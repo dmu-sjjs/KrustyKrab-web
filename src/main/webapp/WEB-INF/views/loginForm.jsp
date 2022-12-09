@@ -39,14 +39,14 @@
             <form id="loginForm" action="login" method="post">
                 <input id="id" type="text" placeholder="아이디" name="id" value="<%= id %>"/><br>
                 <input id="pw" type="password" placeholder="비밀번호" name="pw" value="<%= pw %>"/><br>
-                <input id="saveid" type="checkbox" name="saveIdPw" <%= saveIdPw%>/> ID/PW 저장
+                <input id="saveid" type="checkbox" name="saveIdPw" <%= saveIdPw%>/> ID/PW 저장<br>
                 <input id="loginbtn" type="submit" value="로그인" />
             </form>
             <a href="/user/join">회원가입</a>
         </div>
         <div class="social_login">
             <h2>간편 로그인</h2>
-            내용 넣어야 함.
+            <%--//내용 넣어야 함.--%>
         </div>
     </div>
 </main>
