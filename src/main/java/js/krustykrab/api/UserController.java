@@ -40,11 +40,9 @@ public class UserController {
     private void checkSaveIdPw(UserDto userDto, String saveIdPw, HttpSession session) {
         if (saveIdPw != null) {
             session.setAttribute("id", userDto.getId());
-            session.setAttribute("pw", userDto.getPw());
             session.setAttribute("saveIdPw", "checked");
         } else {
             session.setAttribute("id", "");
-            session.setAttribute("pw", "");
             session.setAttribute("saveIdPw", "");
         }
     }
