@@ -2,12 +2,12 @@
 *{
 	list-style: none;
 }
+
 body {
 	background-color: #F1EBE7;
 	padding: 0;
 	margin: 0;
 }
-
 
 ul {
 	padding-inline-start: 0px;
@@ -97,7 +97,7 @@ a:hover {
 #deliverybtn {
 	margin-left: 50px;
 	border-radius: 30px;
-	background-color: black;
+	background-color: #C3291C;
 	color: white;
 	border: none;
 	font-size: 30px;
