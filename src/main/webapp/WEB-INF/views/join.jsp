@@ -9,7 +9,7 @@
     <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
     <%@include file="login/csslink.jsp"%>
-    <title>The Krusty Krab</title>
+    <title>JOIN</title>
 </head>
 <body>
 <%@include file="login/loginHeader.jsp" %>

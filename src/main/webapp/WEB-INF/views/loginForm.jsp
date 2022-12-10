@@ -19,7 +19,7 @@
     <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
 
     <%@include file="login/csslink.jsp"%>
-    <title>The Krusty Krab</title>
+    <title>LOGIN</title>
 </head>
 <body>
 <%@include file="login/loginHeader.jsp"%>

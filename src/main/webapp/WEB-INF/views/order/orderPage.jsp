@@ -11,7 +11,7 @@
 
     <%@include file="../login/csslink.jsp" %>
     <link rel="stylesheet" href="/resources/css/order/order.css">
-    <title>The Krusty Krab</title>
+    <title>ORDER</title>
 </head>
 <body>
 <%@include file="../login/loginHeader.jsp" %>

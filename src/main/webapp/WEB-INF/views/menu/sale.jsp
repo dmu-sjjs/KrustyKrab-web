@@ -7,7 +7,7 @@
     <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
     <%@include file="../main/csslink.jsp" %>
     <link rel="stylesheet" href="/resources/css/menu/burger.css">
-    <title>The Krusty Krab</title>
+    <title>SALE MENU</title>
 </head>
 <body>
 <header>
