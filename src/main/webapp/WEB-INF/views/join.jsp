@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="/resources/img/favicon.png" type="image/x-icon">
     <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
-    <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
+    <script src="https://kit.fontawesome.com/32e5e610fe.js" crossorigin="anonymous"></script>
     <%@include file="login/csslink.jsp"%>
     <title>JOIN</title>
 </head>
@@ -31,7 +30,7 @@
                 <input required id="joinId" type="text" name="id" placeholder="ID" ><a id="overlap">중복확인</a><br>
                 <input id="idDuplicationChecking" type="hidden" value="0" name="idDuplicationCheck" />
                 비밀번호<br>
-                <input required type="text" name="pw" placeholder="Password" ><br>
+                <input required id="password" type="password" name="pw" placeholder="Password" > <i class="fa-solid fa-eye"></i><br>
 
                 이름<br>
                 <input required type="text" name="username" placeholder="홍길동"><br>
@@ -67,7 +66,21 @@
 <script src="/resources/js/address.js"></script>
 <script src="https://kit.fontawesome.com/32e5e610fe.js" crossorigin="anonymous"></script>
 <script src="/resources/js/overlapCheck.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.joinForm i').on('click',function(){
+            $('#password').toggleClass('active');
+            if($('#password').hasClass('active')){
+                $(this).attr('class',"fa-sharp fa-solid fa-eye-slash")
+                    .prev('input').attr('type',"text");
+            }else{
+                $(this).attr('class',"fa-solid fa-eye")
+                    .prev('input').attr('type','password');
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
