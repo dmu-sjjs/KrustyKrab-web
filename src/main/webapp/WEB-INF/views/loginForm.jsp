@@ -17,6 +17,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="/resources/img/favicon.png" type="image/x-icon">
     <link rel="icon" href="/resources/img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/32e5e610fe.js" crossorigin="anonymous"></script>
 
     <%@include file="login/csslink.jsp"%>
     <title>LOGIN</title>
@@ -38,7 +39,7 @@
             <h2>일반 로그인</h2>
             <form id="loginForm" action="login" method="post">
                 <input id="id" type="text" placeholder="아이디" name="id" value="<%= id %>"/><br>
-                <input id="pw" type="password" placeholder="비밀번호" name="pw" value="<%= pw %>"/><br>
+                <input id="pw" type="password" placeholder="비밀번호" name="pw" value="<%= pw %>"/> <i class="fa-solid fa-eye"></i><br>
                 <input id="saveid" type="checkbox" name="saveIdPw" <%= saveIdPw%>/> ID/PW 저장<br>
                 <input id="loginbtn" type="submit" value="로그인" />
             </form>
@@ -55,5 +56,20 @@
     <%@ include file="footer.jsp"%>
     <!-- End footer -->
 </footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#loginForm i').on('click',function(){
+            $('#pw').toggleClass('active');
+            if($('#pw').hasClass('active')){
+                $(this).attr('class',"fa-sharp fa-solid fa-eye-slash")
+                    .prev('input').attr('type',"text");
+            }else{
+                $(this).attr('class',"fa-solid fa-eye")
+                    .prev('input').attr('type','password');
+            }
+        });
+    });
+</script>
 </body>
 </html>
