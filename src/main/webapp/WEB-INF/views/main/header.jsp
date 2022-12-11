@@ -7,9 +7,11 @@
     }catch(NullPointerException e){
         e.printStackTrace();
     }
-
     if (userDto == null) {
 %>
+<audio autoplay>
+    <source src="/resources/audio/opening.mp3" type="audio/mp3">
+</audio>
 <div id="member">
     <a class="taga" href="/user/login"><strong>로그인</strong></a>
 </div>

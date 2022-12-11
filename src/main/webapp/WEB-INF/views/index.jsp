@@ -9,7 +9,6 @@
     <%@include file="main/csslink.jsp" %>
 </head>
 <body>
-
     <header>
     <jsp:include page="main/header.jsp"/>
     </header>
@@ -18,8 +17,5 @@
     <footer>
     <jsp:include page="footer.jsp"/>
     </footer>
-    <audio autoplay loop>
-        <source src="/resources/audio/opening.mp3" type="audio/mp3">
-    </audio>
 </body>
 </html>
