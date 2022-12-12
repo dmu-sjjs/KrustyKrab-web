@@ -32,7 +32,10 @@
         <iframe width="960" height="400" src="https://www.youtube.com/embed/MlNndKvXa80" title="게살버거 1시간" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
 
     <div id="sns">
-        <h1 id="snstitle">Krusty Krab</h1>
+        <audio autoplay loop controls>
+            <source src="/resources/audio/opening.mp3" type="audio/mp3">
+        </audio>
+        <br><h1 id="snstitle">Krusty Krab</h1>
         <ul class="snslist">
             <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/youtube.png" /></a> Youtube</li>
             <li><a href="#"><img width="80px" height="80px" src="/resources/img/main/instagram.png" /></a> Instagram</li>
