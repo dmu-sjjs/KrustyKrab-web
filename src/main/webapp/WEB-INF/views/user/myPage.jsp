@@ -29,23 +29,6 @@
         <input type="text" value="${u.detailAddress}">
         <input type="submit" value="변경">
     </form>
-
-
-
-    <c:forEach var="u" items="${users}">
-        <tr>
-            <td>${u.userId}</td>
-            <td>${u.id}</td>
-            <td>${u.pw}</td>
-            <td>${u.authority}</td>
-            <td>${u.username}</td>
-            <td>${u.address}</td>
-            <td>${u.detailAddress}</td>
-            <td>${u.phoneNumber}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-    </table>
 </main>
 <footer>
 </footer>
