@@ -9,26 +9,38 @@
     }
     if (userDto == null) {
 %>
-<div id="member">
-    <a class="taga" href="/user/login"><strong>로그인</strong></a>
-</div>
+    <div id="member">
+        <div id="mem">
+            <div class="lg">
+                <a class="taga" href="/user/login">로그인</a>
+            </div>
+        </div>
+    </div>
 <%
     }else {
         String name = userDto.getUsername();
         %>
         <div id=member>
-            <a class="taga" href="/user/logout"><strong>로그아웃</strong></a>
-            <%
-                if(userDto.getAuthority().equals("ADMIN")){
-            %>
-                    <a class="taga" href="/admin/main"><strong>관리자 페이지</strong></a>
-            <%
-            } else if(userDto.getAuthority().equals("USER")) {
-            %>
-                <a class="taga" href="/user/mypage"><strong>마이페이지</strong></a>
-            <%
-                }
-            %>
+            <div id="mem">
+                <div class="lg">
+                    <a class="taga" href="/user/logout">로그아웃</a>
+                    <%
+                        if(userDto.getAuthority().equals("ADMIN")){
+                    %>
+                </div>
+                <div class="lg">
+                            <a class="taga" href="/admin/main">관리자 페이지</a>
+                    <%
+                    } else if(userDto.getAuthority().equals("USER")) {
+                    %>
+                </div>
+                <div class="lg">
+                        <a class="taga" href="/user/mypage">마이페이지</a>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
         </div>
         <%
     }

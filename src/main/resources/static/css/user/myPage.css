@@ -1,11 +1,15 @@
 body {
     padding: 20px;
     background-color: #F1EBE7;
+    width: 1200px;
 }
 
 main {
-    margin-left: 30px;
+    width: 1200px;
+    margin: 0 auto;
 }
+
+
 form {
     width: 960px;
     border-top: 1px solid black;
@@ -20,28 +24,35 @@ input {
 #changeSubmit {
     margin-top: 20px;
     margin-right: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
+    border: none;
+    border-radius: 0.5em;
     font-size: 25px;
-    background-color: black;
-    color: white;
+    background-color: #CAD4FB;
+    color: #C3291C;
+    text-shadow: -1px 0 black, 1px 0 black, -1px 0 black, 1px 0 black;
     margin-bottom: 15px;
+    height: 48px;
+    padding: 0px 16px 0px 16px;
 }
 
 #changeSubmit:hover {
-    color: black;
-    background-color: white;
-}
-
-#goHome {
-    font-size: 25px;
-    border: none;
-    border-radius: 15px;
-    color: #CAD4FB;
+    text-shadow: none;
+    color: white;
     background-color: #C3291C;
 }
 
+#goHome {
+    font-size: 22px;
+    border: none;
+    border-radius: 0.5em;
+    color: black;
+    background-color: #fff;
+    height: 48px;
+    padding: 0px 16px 0px 16px;
+}
+
 #goHome:hover {
-    color: #C3291C;
-    background-color: #CAD4FB;
+    color: white;
+    background-color: black;
+    border: 1px solid #CAD4FB;
 }

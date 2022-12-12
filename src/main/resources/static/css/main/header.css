@@ -5,8 +5,9 @@
 
 body {
 	background-color: #F1EBE7;
+	width: 100%;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 }
 
 ul {
@@ -14,7 +15,7 @@ ul {
 }
 
 #bg {
-	height: 170px;
+	height: 185px;
 }
 
 .taga {
@@ -52,6 +53,7 @@ a:hover {
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
+	width: 1200px;
 }
 
 
@@ -79,6 +81,10 @@ a:hover {
 
 #menu > #menubars, .menutitle, button{
 	margin-top: 30px;
+}
+
+#menu > #menubars{
+	width: 800px;
 }
 
 .submenu {
