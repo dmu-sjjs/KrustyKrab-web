@@ -26,7 +26,11 @@
             %>
                     <a class="taga" href="/admin/main"><strong>관리자 페이지</strong></a>
             <%
-            }
+            } else if(userDto.getAuthority().equals("USER")) {
+            %>
+                <a class="taga" href="/user/mypage"><strong>관리자 페이지</strong></a>
+            <%
+                }
             %>
         </div>
         <%

@@ -53,6 +53,15 @@ public class UserController {
         return "redirect:/";
     }
 
+    // 마이 페이지
+    @GetMapping("/mypage")
+    public String toMyPage(HttpSession session, Model model) {
+        UserDto user = (UserDto)session.getAttribute("user");
+        model.addAttribute("user", user);
+
+        return "myPage";
+    }
+
     // 회원가입 관련
     @GetMapping("/join")
     public String toJoinForm() {
