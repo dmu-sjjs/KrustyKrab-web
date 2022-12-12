@@ -6,11 +6,13 @@ import js.krustykrab.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
@@ -63,7 +65,7 @@ public class UserService {
     }
 
     public UserDto changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber) {
-        User user = userRepository.changeUserData(userId, username, address, detailAddress, phoneNumber);
-        return user.toDto();
+        userRepository.changeUserData(userId, username, address, detailAddress, phoneNumber);
+        return userRepository.findById(userId).get().toDto();
     }
 }
