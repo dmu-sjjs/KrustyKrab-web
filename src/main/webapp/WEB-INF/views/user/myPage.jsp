@@ -21,8 +21,6 @@
     <h1>마이페이지</h1>
     <h2>${user.username} 님, 환영합니다!</h2>
     <form action="/user/mypage/change" method="post" >
-        아이디<br>
-        <input readonly type="text" value="${user.id}" />
         <input type="hidden" name="userId" value="${user.userId}" />
         <input id="idDuplicationChecking" type="hidden" value="0" name="idDuplicationCheck" /><br>
 
