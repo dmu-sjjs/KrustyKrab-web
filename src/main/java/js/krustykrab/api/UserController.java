@@ -62,6 +62,13 @@ public class UserController {
         return "user/myPage";
     }
 
+    @PostMapping("/mypage/change")
+    public String changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber) {
+        userService.changeUserData(userId, username, address, detailAddress, phoneNumber);
+
+        return "redirect:myPage";
+    }
+
     // 회원가입 관련
     @GetMapping("/join")
     public String toJoinForm() {

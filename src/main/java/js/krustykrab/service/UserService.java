@@ -61,4 +61,9 @@ public class UserService {
 
         return userDtos;
     }
+
+    public UserDto changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber) {
+        User user = userRepository.changeUserData(userId, username, address, detailAddress, phoneNumber);
+        return user.toDto();
+    }
 }
