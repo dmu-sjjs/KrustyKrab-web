@@ -16,17 +16,15 @@
 </header>
 <main>
     <br>
-    <input value="${u.id}" readonly>
-    <form action="/user/mypage/change/username" method="post">
-        <input type="text" value="${u.username}">
+    <input value="${user.id}" readonly>
+    <form action="/user/mypage/change" method="post">
+        <input type="text" name="username" value="${user.username}" readonly>
         <input type="submit" value="변경">
-    </form>
-    <form action="/user/mypage/change/address" method="post">
-        <input type="text" value="${u.address}">
+
+        <input type="text" name="address" value="${user.address}" readonly>
         <input type="submit" value="변경">
-    </form>
-    <form action="/user/mypage/change/detailAddress" method="post">
-        <input type="text" value="${u.detailAddress}">
+
+        <input type="text" name="detailAddress" value="${user.detailAddress}" readonly>
         <input type="submit" value="변경">
     </form>
 </main>
