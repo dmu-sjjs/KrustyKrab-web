@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/resources/css/user/myPage.css" >
     <link rel="stylesheet" href="/resources/css/main/header.css" >
+    <link rel="stylesheet" href="/resources/css/main/login.css" >
     <link rel="stylesheet" href="/resources/css/footer.css" >
     <title>ADMIN</title>
 </head>
