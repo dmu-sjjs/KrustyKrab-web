@@ -59,7 +59,7 @@ public class UserController {
         UserDto user = (UserDto)session.getAttribute("user");
         model.addAttribute("user", user);
 
-        return "myPage";
+        return "user/myPage";
     }
 
     // 회원가입 관련
