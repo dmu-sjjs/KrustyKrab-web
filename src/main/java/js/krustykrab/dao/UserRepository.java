@@ -2,6 +2,7 @@ package js.krustykrab.dao;
 
 import js.krustykrab.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
@@ -17,8 +18,9 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByIdAndPw(String id, String pw);
 
+    @Modifying
     @Query("UPDATE User u SET u.username = ?2, u.address = ?3, u.detailAddress = ?4, u.phoneNumber = ?5 WHERE u.userId = ?1")
-    User changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber);
+    Integer changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber);
 
     List<User> findAll();
 }

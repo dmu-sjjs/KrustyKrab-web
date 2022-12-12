@@ -65,10 +65,10 @@ public class UserController {
     }
 
     @PostMapping("/mypage/change")
-    public String changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber) {
-        userService.changeUserData(userId, username, address, detailAddress, phoneNumber);
-
-        return "redirect:myPage";
+    public String changeUserData(HttpSession session, Long userId, String username, String address, String detailAddress, String phoneNumber) {
+        UserDto userDto = userService.changeUserData(userId, username, address, detailAddress, phoneNumber);
+        session.setAttribute("user", userDto);
+        return "redirect:/user/mypage";
     }
 
     // 회원가입 관련
