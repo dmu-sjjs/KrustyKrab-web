@@ -8,6 +8,10 @@ import js.krustykrab.dto.order.OrderDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class OrderService {
@@ -20,6 +24,12 @@ public class OrderService {
         Store store = storeService.findStoreById(storeId).toHasIdEntity();
         Order order = orderDto.toEntity(user, store);
         return orderRepository.save(order);
+    }
+
+    public List<OrderDto> findAllOrder() {
+        return orderRepository.findAll().stream()
+                .map(order -> order.toDto())
+                .collect(Collectors.toList());
     }
 
     public OrderDto findOrderById(Long orderId) {

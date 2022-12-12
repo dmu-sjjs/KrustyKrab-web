@@ -45,6 +45,34 @@
         </c:forEach>
         </tbody>
     </table>
+    <br>
+    <h2>주문 정보</h2>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>orderId</th>
+            <th>주문자ID</th>
+            <th>매장번호</th>
+            <th>주소</th>
+            <th>상세주소</th>
+            <th>주문일시</th>
+            <th>배달완료여부</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="o" items="${orders}">
+            <tr>
+                <td>${o.orderId}</td>
+                <td>${o.userId}</td>
+                <td>${o.storeId}</td>
+                <td>${o.address}</td>
+                <td>${o.detailAddress}</td>
+                <td>${o.orderDate}</td>
+                <td>${o.isCompleted}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
 </main>
 <footer>
 </footer>
