@@ -3,6 +3,7 @@ package js.krustykrab.service;
 import js.krustykrab.dao.UserRepository;
 import js.krustykrab.domain.user.User;
 import js.krustykrab.dto.UserDto;
+import js.krustykrab.dto.UserMypageDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -64,8 +65,8 @@ public class UserService {
         return userDtos;
     }
 
-    public UserDto changeUserData(Long userId, String username, String address, String detailAddress, String phoneNumber) {
-        userRepository.changeUserData(userId, username, address, detailAddress, phoneNumber);
-        return userRepository.findById(userId).get().toDto();
+    public UserDto changeUserData(UserMypageDto mypageDto) {
+        userRepository.changeUserData(mypageDto.getUserId(), mypageDto.getUsername(), mypageDto.getAddress(), mypageDto.getDetailAddress(), mypageDto.getPhoneNumber());
+        return userRepository.findById(mypageDto.getUserId()).get().toDto();
     }
 }

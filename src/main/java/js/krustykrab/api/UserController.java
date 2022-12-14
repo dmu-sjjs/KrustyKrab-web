@@ -1,6 +1,7 @@
 package js.krustykrab.api;
 
 import js.krustykrab.dto.UserDto;
+import js.krustykrab.dto.UserMypageDto;
 import js.krustykrab.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -65,8 +66,8 @@ public class UserController {
     }
 
     @PostMapping("/mypage/change")
-    public String changeUserData(HttpSession session, Long userId, String username, String address, String detailAddress, String phoneNumber) {
-        UserDto userDto = userService.changeUserData(userId, username, address, detailAddress, phoneNumber);
+    public String changeUserData(HttpSession session, UserMypageDto mypageDto) {
+        UserDto userDto = userService.changeUserData(mypageDto);
         session.setAttribute("user", userDto);
         return "redirect:/user/mypage";
     }
